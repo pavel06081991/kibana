@@ -27,16 +27,25 @@ export function i18nDirective(i18n: I18nServiceType) {
       defaultMessage: '@i18nDefaultMessage',
       values: '=i18nValues',
     },
-    link($scope: angular.IScope, $element: angular.IRootElementService) {
+    link(
+      $scope: angular.IScope,
+      $element: angular.IRootElementService,
+      $compile: angular.ICompileService,
+      $sanitize: angular.sanitize.ISanitizeService
+    ) {
       $scope.$watchGroup(
         ['id', 'defaultMessage', 'values'],
         ([id, defaultMessage = '', values = {}]) => {
           $element.html(
-            i18n(id, {
-              values,
-              defaultMessage,
-            })
+            $sanitize(
+              i18n(id, {
+                values,
+                defaultMessage,
+              })
+            )
           );
+
+          $compile($element.contents())($scope.$parent);
         }
       );
     },
