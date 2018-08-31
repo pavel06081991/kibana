@@ -19,6 +19,7 @@
 
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { injectI18n, FormattedMessage } from '@kbn/i18n/react';
 import _ from 'lodash';
 import { toastNotifications } from 'ui/notify';
 import {
@@ -49,7 +50,7 @@ export const EMPTY_FILTER = '';
 // and not supporting server-side paging.
 // This component does not try to tackle these problems (yet) and is just feature matching the legacy component
 // TODO support server side sorting/paging once title and description are sortable on the server.
-export class DashboardListing extends React.Component {
+class DashboardListingUi extends React.Component {
 
   constructor(props) {
     super(props);
@@ -111,7 +112,10 @@ export class DashboardListing extends React.Component {
       await this.props.delete(this.state.selectedIds);
     } catch (error) {
       toastNotifications.addDanger({
-        title: `Unable to delete dashboard(s)`,
+        title: this.props.intl.formatMessage({
+          id: 'kbn.dashboard.dashboardListing.toastNotifications.unableToDeleteDashboardDanger',
+          defaultMessage: 'Unable to delete dashboard(s)',
+        }),
         text: `${error}`,
       });
     }
@@ -194,14 +198,28 @@ export class DashboardListing extends React.Component {
     return (
       <EuiOverlayMask>
         <EuiConfirmModal
-          title="Delete selected dashboards?"
+          title={this.props.intl.formatMessage({
+            id: 'kbn.dashboard.dashboardListing.deleteSelectedDashboardsConfirmModal.title',
+            defaultMessage: 'Delete selected dashboards?',
+          })}
           onCancel={this.closeDeleteModal}
           onConfirm={this.deleteSelectedItems}
-          cancelButtonText="Cancel"
-          confirmButtonText="Delete"
+          cancelButtonText={this.props.intl.formatMessage({
+            id: 'kbn.dashboard.dashboardListing.deleteSelectedDashboardsConfirmModal.cancelButtonLabel',
+            defaultMessage: 'Cancel',
+          })}
+          confirmButtonText={this.props.intl.formatMessage({
+            id: 'kbn.dashboard.dashboardListing.deleteSelectedDashboardsConfirmModal.confirmButtonLabel',
+            defaultMessage: 'Delete',
+          })}
           defaultFocusedButton="cancel"
         >
-          <p>{`You can't recover deleted dashboards.`}</p>
+          <p>
+            <FormattedMessage
+              id="kbn.dashboard.dashboardListing.deleteSelectedDashboardsConfirmModal.description"
+              defaultMessage="You can't recover deleted dashboards."
+            />
+          </p>
         </EuiConfirmModal>
       </EuiOverlayMask>
     );
@@ -212,14 +230,40 @@ export class DashboardListing extends React.Component {
       return (
         <React.Fragment>
           <EuiCallOut
-            title="Listing limit exceeded"
+            title={this.props.intl.formatMessage({
+              id: 'kbn.dashboard.dashboardListing.listingLimitExceeded.title',
+              defaultMessage: 'Listing limit exceeded',
+            })}
             color="warning"
             iconType="help"
           >
             <p>
-              You have {this.state.totalDashboards} dashboards,
-              but your <strong>listingLimit</strong> setting prevents the table below from displaying more than {this.props.listingLimit}.
-              You can change this setting under <EuiLink href="#/management/kibana/settings">Advanced Settings</EuiLink>.
+              <FormattedMessage
+                id="kbn.dashboard.dashboardListing.listingLimitExceeded.description"
+                defaultMessage="You have {totalDashboards} dashboards,
+but your {listingLimitText} setting prevents the table below from displaying more than {listingLimitValue}.
+You can change this setting under {advancedSettingsLink}.
+                "
+                values={{
+                  totalDashboards: this.state.totalDashboards,
+                  listingLimitValue: this.props.listingLimit,
+                  listingLimitText: (
+                    <strong>{this.props.intl.formatMessage({
+                      id: 'kbn.dashboard.dashboardListing.listingLimitExceeded.listingLimitText',
+                      defaultMessage: 'listingLimit',
+                    })}
+                    </strong>
+                  ),
+                  advancedSettingsLink: (
+                    <EuiLink href="#/management/kibana/settings">
+                      {this.props.intl.formatMessage({
+                        id: 'kbn.dashboard.dashboardListing.listingLimitExceeded.advancedSettingsLinkText',
+                        defaultMessage: 'Advanced Settings',
+                      })}
+                    </EuiLink>
+                  )
+                }}
+              />
             </p>
           </EuiCallOut>
           <EuiSpacer size="m" />
@@ -471,7 +515,7 @@ export class DashboardListing extends React.Component {
   }
 }
 
-DashboardListing.propTypes = {
+DashboardListingUi.propTypes = {
   find: PropTypes.func.isRequired,
   delete: PropTypes.func.isRequired,
   listingLimit: PropTypes.number.isRequired,
@@ -479,6 +523,8 @@ DashboardListing.propTypes = {
   initialFilter: PropTypes.string,
 };
 
-DashboardListing.defaultProps = {
+DashboardListingUi.defaultProps = {
   initialFilter: EMPTY_FILTER,
 };
+
+export const DashboardListing = injectI18n(DashboardListingUi);
