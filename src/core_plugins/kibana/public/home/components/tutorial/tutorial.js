@@ -300,13 +300,12 @@ class TutorialUi extends React.Component {
       content = (
         <div className="homTutorial__notFoundPanel">
           <EuiText>
-            <p>
-              <FormattedMessage
-                id="kbn.home.tutorial.noTutorialLabel"
-                defaultMessage="Unable to find tutorial {tutorialId}"
-                values={{ tutorialId: this.props.tutorialId }}
-              />
-            </p>
+            <FormattedMessage
+              id="kbn.home.tutorial.noTutorialLabel"
+              defaultMessage="Unable to find tutorial {tutorialId}"
+              values={{ tutorialId: this.props.tutorialId }}
+              tagName="p"
+            />
           </EuiText>
         </div>
       );

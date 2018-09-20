@@ -40,40 +40,53 @@ export const UrlTemplateFlyoutComponent = ({
     >
       <EuiFlyoutBody>
         <EuiText>
-          <h3>
-            <FormattedMessage id="common.ui.fieldEditor.urlTemplateHeader" defaultMessage="Url Template" />
-          </h3>
-          <p>
-            <FormattedMessage
-              id="common.ui.fieldEditor.urlTemplateLabel.fieldDetail"
-              defaultMessage="If a field only contains part of a URL then a {strongUrlTemplate} can be used to format the value as
-              a complete URL. The format is a string which uses double curly brace notation {doubleCurlyBraces} to inject values.
-              The following values can be accessed:"
-              values={{
-                doubleCurlyBraces: <EuiCode>{('{{ }}')}</EuiCode>,
-                strongUrlTemplate: (
-                  <strong>
-                    <FormattedMessage
-                      id="common.ui.fieldEditor.urlTemplateLabel.strongUrlTemplateLabel"
-                      defaultMessage="Url Template"
-                    />
-                  </strong>)
-              }}
-            />
-          </p>
+          <FormattedMessage
+            id="common.ui.fieldEditor.urlTemplateHeader"
+            defaultMessage="Url Template"
+            tagName="h3"
+          />
+          <FormattedMessage
+            id="common.ui.fieldEditor.urlTemplateLabel.fieldDetail"
+            defaultMessage="If a field only contains part of a URL then a {strongUrlTemplate} can be used to format the value as
+            a complete URL. The format is a string which uses double curly brace notation {doubleCurlyBraces} to inject values.
+            The following values can be accessed:"
+            values={{
+              doubleCurlyBraces: <EuiCode>{('{{ }}')}</EuiCode>,
+              strongUrlTemplate: (
+                <FormattedMessage
+                  id="common.ui.fieldEditor.urlTemplateLabel.strongUrlTemplateLabel"
+                  defaultMessage="Url Template"
+                  tagName="strong"
+                />
+              )
+            }}
+            tagName="p"
+          />
           <ul>
             <li>
               <EuiCode>value</EuiCode> &mdash;&nbsp;
-              <FormattedMessage id="common.ui.fieldEditor.urlTemplate.valueLabel" defaultMessage="The URI-escaped value" />
+              <FormattedMessage
+                id="common.ui.fieldEditor.urlTemplate.valueLabel"
+                defaultMessage="The URI-escaped value"
+              >
+                {(text) => text}
+              </FormattedMessage>
             </li>
             <li>
               <EuiCode>rawValue</EuiCode> &mdash;&nbsp;
-              <FormattedMessage id="common.ui.fieldEditor.urlTemplate.rawValueLabel" defaultMessage="The unescaped value" />
+              <FormattedMessage
+                id="common.ui.fieldEditor.urlTemplate.rawValueLabel"
+                defaultMessage="The unescaped value"
+              >
+                {(text) => text}
+              </FormattedMessage>
             </li>
           </ul>
-          <h4>
-            <FormattedMessage id="common.ui.fieldEditor.urlTemplate.examplesHeader" defaultMessage="Examples" />
-          </h4>
+          <FormattedMessage
+            id="common.ui.fieldEditor.urlTemplate.examplesHeader"
+            defaultMessage="Examples"
+            tagName="h4"
+          />
           <EuiBasicTable
             items={[
               {

@@ -34,18 +34,19 @@ export const Header = ({ addScriptedFieldUrl }) => (
   <EuiFlexGroup alignItems="center">
     <EuiFlexItem>
       <EuiTitle size="s">
-        <h3>
-          <FormattedMessage id="kbn.management.editIndexPattern.scriptedHeader" defaultMessage="Scripted fields"/>
-        </h3>
+        <FormattedMessage
+          id="kbn.management.editIndexPattern.scriptedHeader"
+          defaultMessage="Scripted fields"
+          tagName="h3"
+        />
       </EuiTitle>
       <EuiText>
-        <p>
-          <FormattedMessage
-            id="kbn.management.editIndexPattern.scriptedLabel"
-            defaultMessage="You can use scripted fields in visualizations and display them in your documents. However, you cannot search
-            scripted fields."
-          />
-        </p>
+        <FormattedMessage
+          id="kbn.management.editIndexPattern.scriptedLabel"
+          defaultMessage="You can use scripted fields in visualizations and display them in your documents. However, you cannot search
+          scripted fields."
+          tagName="p"
+        />
       </EuiText>
     </EuiFlexItem>
 
@@ -54,7 +55,12 @@ export const Header = ({ addScriptedFieldUrl }) => (
         data-test-subj="addScriptedFieldLink"
         href={addScriptedFieldUrl}
       >
-        <FormattedMessage id="kbn.management.editIndexPattern.scripted.addFieldButton" defaultMessage="Add scripted field"/>
+        <FormattedMessage
+          id="kbn.management.editIndexPattern.scripted.addFieldButton"
+          defaultMessage="Add scripted field"
+        >
+          {(text) => text}
+        </FormattedMessage>
       </EuiButton>
     </EuiFlexItem>
   </EuiFlexGroup>

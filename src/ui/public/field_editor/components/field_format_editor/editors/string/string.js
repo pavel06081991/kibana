@@ -55,7 +55,14 @@ export class StringFormatEditor extends DefaultFormatEditor {
     return (
       <Fragment>
         <EuiFormRow
-          label={<FormattedMessage id="common.ui.fieldEditor.string.transformLabel" defaultMessage="Transform"/>}
+          label={(
+            <FormattedMessage
+              id="common.ui.fieldEditor.string.transformLabel"
+              defaultMessage="Transform"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
           isInvalid={!!error}
           error={error}
         >

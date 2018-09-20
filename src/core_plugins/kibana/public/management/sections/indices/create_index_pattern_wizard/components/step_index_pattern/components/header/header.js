@@ -45,12 +45,11 @@ export const HeaderComponent = ({
 }) => (
   <div {...rest}>
     <EuiTitle size="s">
-      <h2>
-        <FormattedMessage
-          id="kbn.management.createIndexPattern.stepHeader"
-          defaultMessage="Step 1 of 2: Define index pattern"
-        />
-      </h2>
+      <FormattedMessage
+        id="kbn.management.createIndexPattern.stepHeader"
+        defaultMessage="Step 1 of 2: Define index pattern"
+        tagName="h2"
+      />
     </EuiTitle>
     <EuiSpacer size="m"/>
     <EuiFlexGroup justifyContent="spaceBetween" alignItems="flexEnd">
@@ -59,28 +58,30 @@ export const HeaderComponent = ({
           isInvalid={isInputInvalid}
         >
           <EuiFormRow
-            label={<FormattedMessage
-              id="kbn.management.createIndexPattern.step.indexPatternLabel"
-              defaultMessage="Index pattern"
-            />}
+            label={(
+              <FormattedMessage
+                id="kbn.management.createIndexPattern.step.indexPatternLabel"
+                defaultMessage="Index pattern"
+              >
+                {(text) => text}
+              </FormattedMessage>
+            )}
             isInvalid={isInputInvalid}
             error={errors}
             helpText={
               <div>
-                <p>
-                  <FormattedMessage
-                    id="kbn.management.createIndexPattern.step.indexPattern.allowLabel"
-                    defaultMessage="You can use a {asterisk} as a wildcard in your index pattern."
-                    values={{ asterisk: <strong>*</strong> }}
-                  />
-                </p>
-                <p>
-                  <FormattedMessage
-                    id="kbn.management.createIndexPattern.step.indexPattern.disallowLabel"
-                    defaultMessage="You can't use spaces or the characters {characterList}."
-                    values={{ characterList: <strong>{characterList}</strong> }}
-                  />
-                </p>
+                <FormattedMessage
+                  id="kbn.management.createIndexPattern.step.indexPattern.allowLabel"
+                  defaultMessage="You can use a {asterisk} as a wildcard in your index pattern."
+                  values={{ asterisk: <strong>*</strong> }}
+                  tagName="p"
+                />
+                <FormattedMessage
+                  id="kbn.management.createIndexPattern.step.indexPattern.disallowLabel"
+                  defaultMessage="You can't use spaces or the characters {characterList}."
+                  values={{ characterList: <strong>{characterList}</strong> }}
+                  tagName="p"
+                />
               </div>
             }
           >
@@ -108,7 +109,9 @@ export const HeaderComponent = ({
           <FormattedMessage
             id="kbn.management.createIndexPattern.step.nextStepButton"
             defaultMessage="Next step"
-          />
+          >
+            {(text) => text}
+          </FormattedMessage>
         </EuiButton>
       </EuiFlexItem>
     </EuiFlexGroup>

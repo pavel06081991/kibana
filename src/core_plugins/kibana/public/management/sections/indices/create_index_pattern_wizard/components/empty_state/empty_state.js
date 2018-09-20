@@ -42,48 +42,57 @@ export const EmptyState = ({
       <EuiFlexItem grow={false}>
         <EuiTitle>
           <EuiTextColor color="subdued">
-            <h2 style={{ textAlign: 'center' }}>
-              <FormattedMessage
-                id="kbn.management.createIndexPattern.emptyStateHeader"
-                defaultMessage="Couldn't find any Elasticsearch data"
-              />
-            </h2>
+            <FormattedMessage
+              id="kbn.management.createIndexPattern.emptyStateHeader"
+              defaultMessage="Couldn't find any Elasticsearch data"
+            >
+              {(text) => (
+                <h2 style={{ textAlign: 'center' }}>
+                  {text}
+                </h2>
+              )}
+            </FormattedMessage>
           </EuiTextColor>
         </EuiTitle>
         <EuiSpacer size="s"/>
         <EuiText>
-          <p>
-            <FormattedMessage
-              id="kbn.management.createIndexPattern.emptyStateLabel.emptyStateDetail"
-              defaultMessage="{needToIndex} {learnHowLink} or {getStartedLink}"
-              values={{
-                needToIndex: (
-                  <EuiTextColor color="subdued">
-                    <FormattedMessage
-                      id="kbn.management.createIndexPattern.emptyStateLabel.needToIndexLabel"
-                      defaultMessage="You'll need to index some data into Elasticsearch before you can create an index pattern."
-                    />
-                  </EuiTextColor>
-                ),
-                learnHowLink: (
-                  <EuiLink href="#/home/tutorial_directory">
-                    <FormattedMessage
-                      id="kbn.management.createIndexPattern.emptyStateLabel.learnHowLink"
-                      defaultMessage="Learn how"
-                    />
-                  </EuiLink>
-                ),
-                getStartedLink: (
-                  <EuiLink href="#/home/tutorial_directory/sampleData">
-                    <FormattedMessage
-                      id="kbn.management.createIndexPattern.emptyStateLabel.getStartedLink"
-                      defaultMessage="get started with some sample data sets."
-                    />
-                  </EuiLink>
-                )
-              }}
-            />
-          </p>
+          <FormattedMessage
+            id="kbn.management.createIndexPattern.emptyStateLabel.emptyStateDetail"
+            defaultMessage="{needToIndex} {learnHowLink} or {getStartedLink}"
+            values={{
+              needToIndex: (
+                <EuiTextColor color="subdued">
+                  <FormattedMessage
+                    id="kbn.management.createIndexPattern.emptyStateLabel.needToIndexLabel"
+                    defaultMessage="You'll need to index some data into Elasticsearch before you can create an index pattern."
+                  >
+                    {(text) => text}
+                  </FormattedMessage>
+                </EuiTextColor>
+              ),
+              learnHowLink: (
+                <EuiLink href="#/home/tutorial_directory">
+                  <FormattedMessage
+                    id="kbn.management.createIndexPattern.emptyStateLabel.learnHowLink"
+                    defaultMessage="Learn how"
+                  >
+                    {(text) => text}
+                  </FormattedMessage>
+                </EuiLink>
+              ),
+              getStartedLink: (
+                <EuiLink href="#/home/tutorial_directory/sampleData">
+                  <FormattedMessage
+                    id="kbn.management.createIndexPattern.emptyStateLabel.getStartedLink"
+                    defaultMessage="get started with some sample data sets."
+                  >
+                    {(text) => text}
+                  </FormattedMessage>
+                </EuiLink>
+              )
+            }}
+            tagName="p"
+          />
         </EuiText>
 
         <EuiSpacer size="m"/>
@@ -98,7 +107,9 @@ export const EmptyState = ({
               <FormattedMessage
                 id="kbn.management.createIndexPattern.emptyState.checkDataButton"
                 defaultMessage="Check for new data"
-              />
+              >
+                {(text) => text}
+              </FormattedMessage>
             </EuiButton>
           </EuiFlexItem>
         </EuiFlexGroup>

@@ -40,31 +40,44 @@ export const LabelTemplateFlyoutComponent = ({
     >
       <EuiFlyoutBody>
         <EuiText>
-          <h3>
-            <FormattedMessage id="common.ui.fieldEditor.labelTemplateHeader" defaultMessage="Label Template" />
-          </h3>
-          <p>
-            <FormattedMessage
-              id="common.ui.fieldEditor.labelTemplateLabel"
-              defaultMessage="If the URL in this field is large, it might be useful to provide an alternate template for the text version
-              of the URL. This will be displayed instead of the url, but will still link to the URL. The format is a string which uses
-              double curly brace notation {doubleCurlyBraces} to inject values. The following values can be accessed:"
-              values={{ doubleCurlyBraces: <EuiCode>{('{{ }}')}</EuiCode> }}
-            />
-          </p>
+          <FormattedMessage
+            id="common.ui.fieldEditor.labelTemplateHeader"
+            defaultMessage="Label Template"
+            tagName="h3"
+          />
+          <FormattedMessage
+            id="common.ui.fieldEditor.labelTemplateLabel"
+            defaultMessage="If the URL in this field is large, it might be useful to provide an alternate template for the text version
+            of the URL. This will be displayed instead of the url, but will still link to the URL. The format is a string which uses
+            double curly brace notation {doubleCurlyBraces} to inject values. The following values can be accessed:"
+            values={{ doubleCurlyBraces: <EuiCode>{('{{ }}')}</EuiCode> }}
+            tagName="p"
+          />
           <ul>
             <li>
               <EuiCode>value</EuiCode> &mdash;&nbsp;
-              <FormattedMessage id="common.ui.fieldEditor.labelTemplate.valueLabel" defaultMessage="The fields value" />
+              <FormattedMessage
+                id="common.ui.fieldEditor.labelTemplate.valueLabel"
+                defaultMessage="The fields value"
+              >
+                {(text) => text}
+              </FormattedMessage>
             </li>
             <li>
               <EuiCode>url</EuiCode> &mdash;&nbsp;
-              <FormattedMessage id="common.ui.fieldEditor.labelTemplate.urlLabel" defaultMessage="The formatted URL" />
+              <FormattedMessage
+                id="common.ui.fieldEditor.labelTemplate.urlLabel"
+                defaultMessage="The formatted URL"
+              >
+                {(text) => text}
+              </FormattedMessage>
             </li>
           </ul>
-          <h4>
-            <FormattedMessage id="common.ui.fieldEditor.labelTemplate.examplesHeader" defaultMessage="Examples" />
-          </h4>
+          <FormattedMessage
+            id="common.ui.fieldEditor.labelTemplate.examplesHeader"
+            defaultMessage="Examples"
+            tagName="h4"
+          />
           <EuiBasicTable
             items={[
               {

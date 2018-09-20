@@ -106,7 +106,9 @@ export class InputControlVis extends Component {
               disabled={!this.props.hasValues()}
               data-test-subj="inputControlClearBtn"
             >
-              <FormattedMessage id="inputControl.vis.inputControlVis.clearFormButtonLabel" defaultMessage="Clear form"/>
+              <FormattedMessage id="inputControl.vis.inputControlVis.clearFormButtonLabel" defaultMessage="Clear form">
+                {(text) => text}
+              </FormattedMessage>
             </EuiButton>
           </EuiFormRow>
         </EuiFlexItem>
@@ -117,7 +119,9 @@ export class InputControlVis extends Component {
               disabled={!this.props.hasChanges()}
               data-test-subj="inputControlCancelBtn"
             >
-              <FormattedMessage id="inputControl.vis.inputControlVis.cancelChangesButtonLabel" defaultMessage="Cancel changes"/>
+              <FormattedMessage id="inputControl.vis.inputControlVis.cancelChangesButtonLabel" defaultMessage="Cancel changes">
+                {(text) => text}
+              </FormattedMessage>
             </EuiButton>
           </EuiFormRow>
         </EuiFlexItem>
@@ -129,7 +133,9 @@ export class InputControlVis extends Component {
               disabled={!this.props.hasChanges()}
               data-test-subj="inputControlSubmitBtn"
             >
-              <FormattedMessage id="inputControl.vis.inputControlVis.applyChangesButtonLabel" defaultMessage="Apply changes"/>
+              <FormattedMessage id="inputControl.vis.inputControlVis.applyChangesButtonLabel" defaultMessage="Apply changes">
+                {(text) => text}
+              </FormattedMessage>
             </EuiButton>
           </EuiFormRow>
         </EuiFlexItem>

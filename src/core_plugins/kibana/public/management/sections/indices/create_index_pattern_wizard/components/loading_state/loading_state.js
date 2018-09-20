@@ -36,12 +36,16 @@ export const LoadingState = () => (
       <EuiFlexItem grow={false}>
         <EuiTitle size="s">
           <EuiTextColor color="subdued">
-            <h2 style={{ textAlign: 'center' }}>
-              <FormattedMessage
-                id="kbn.management.createIndexPattern.loadingState.checkingLabel"
-                defaultMessage="Checking for Elasticsearch data"
-              />
-            </h2>
+            <FormattedMessage
+              id="kbn.management.createIndexPattern.loadingState.checkingLabel"
+              defaultMessage="Checking for Elasticsearch data"
+            >
+              {(text) => (
+                <h2 style={{ textAlign: 'center' }}>
+                  {text}
+                </h2>
+              )}
+            </FormattedMessage>
           </EuiTextColor>
         </EuiTitle>
       </EuiFlexItem>

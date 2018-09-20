@@ -25,12 +25,11 @@ import {
   EuiSpacer,
 } from '@elastic/eui';
 
-import { injectI18n, FormattedMessage } from '@kbn/i18n/react';
+import { FormattedMessage } from '@kbn/i18n/react';
 
-export const CallOutsComponent = ({
+export const CallOuts = ({
   deprecatedLangsInUse,
   painlessDocLink,
-  intl
 }) => {
   if (!deprecatedLangsInUse.length) {
     return null;
@@ -39,30 +38,32 @@ export const CallOutsComponent = ({
   return (
     <div>
       <EuiCallOut
-        title={intl.formatMessage({
-          id: 'kbn.management.editIndexPattern.scripted.deprecationLangHeader', defaultMessage: 'Deprecation languages in use'
-        })}
+        title={(
+          <FormattedMessage
+            id="kbn.management.editIndexPattern.scripted.deprecationLangHeader"
+            defaultMessage="Deprecation languages in use"
+          >
+            {(text) => text}
+          </FormattedMessage>
+        )}
         color="danger"
         iconType="cross"
       >
-        <p>
-          <FormattedMessage
-            id="kbn.management.editIndexPattern.scripted.deprecationLangLabel.deprecationLangDetail"
-            defaultMessage="The following deprecated languages are in use: {deprecatedLangsInUse}. Support for these languages will be
-            removed in the next major version of Kibana and Elasticsearch. Convert you scripted fields to {link} to avoid any problems."
-            values={{
-              deprecatedLangsInUse: deprecatedLangsInUse.join(', '),
-              link: (
-                <EuiLink href={painlessDocLink}>
-                  Painless
-                </EuiLink>)
-            }}
-          />
-        </p>
+        <FormattedMessage
+          id="kbn.management.editIndexPattern.scripted.deprecationLangLabel.deprecationLangDetail"
+          defaultMessage="The following deprecated languages are in use: {deprecatedLangsInUse}. Support for these languages will be
+          removed in the next major version of Kibana and Elasticsearch. Convert you scripted fields to {link} to avoid any problems."
+          values={{
+            deprecatedLangsInUse: deprecatedLangsInUse.join(', '),
+            link: (
+              <EuiLink href={painlessDocLink}>
+                Painless
+              </EuiLink>)
+          }}
+          tagName="p"
+        />
       </EuiCallOut>
       <EuiSpacer size="m"/>
     </div>
   );
 };
-
-export const CallOuts = injectI18n(CallOutsComponent);

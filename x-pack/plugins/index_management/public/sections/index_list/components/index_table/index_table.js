@@ -262,21 +262,19 @@ export class IndexTableUi extends Component {
             <EuiFlexGroup justifyContent="spaceBetween" alignItems="flexEnd">
               <EuiFlexItem grow={false}>
                 <EuiTitle size="l">
-                  <h1>
-                    <FormattedMessage
-                      id="xpack.idxMgmt.indexTable.sectionHeading"
-                      defaultMessage="Index management"
-                    />
-                  </h1>
+                  <FormattedMessage
+                    id="xpack.idxMgmt.indexTable.sectionHeading"
+                    defaultMessage="Index management"
+                    tagName="h1"
+                  />
                 </EuiTitle>
                 <EuiSpacer size="s" />
                 <EuiText>
-                  <p>
-                    <FormattedMessage
-                      id="xpack.idxMgmt.indexTable.sectionDescription"
-                      defaultMessage="Update your Elasticsearch indices individually or in bulk"
-                    />
-                  </p>
+                  <FormattedMessage
+                    id="xpack.idxMgmt.indexTable.sectionDescription"
+                    defaultMessage="Update your Elasticsearch indices individually or in bulk"
+                    tagName="p"
+                  />
                 </EuiText>
               </EuiFlexItem>
               <EuiFlexItem grow={false}>
@@ -284,12 +282,14 @@ export class IndexTableUi extends Component {
                   id="checkboxShowSystemIndices"
                   checked={showSystemIndices}
                   onChange={event => showSystemIndicesChanged(event.target.checked)}
-                  label={
-                    intl.formatMessage({
-                      id: 'xpack.idxMgmt.indexTable.systemIndicesSwitchLabel',
-                      defaultMessage: 'Include system indices',
-                    })
-                  }
+                  label={(
+                    <FormattedMessage
+                      id="xpack.idxMgmt.indexTable.systemIndicesSwitchLabel"
+                      defaultMessage="Include system indices"
+                    >
+                      {(text) => text}
+                    </FormattedMessage>
+                  )}
                 />
               </EuiFlexItem>
             </EuiFlexGroup>

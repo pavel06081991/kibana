@@ -187,21 +187,23 @@ class TutorialDirectoryUi extends React.Component {
     return (
       <EuiPage className="homPage">
         <EuiPageBody>
-
-          <a className="kuiLink" href="#/home">
-            <FormattedMessage
-              id="kbn.home.tutorial.homeTitle"
-              defaultMessage="Home"
-            />
-          </a>
+          <FormattedMessage
+            id="kbn.home.tutorial.homeTitle"
+            defaultMessage="Home"
+          >
+            {(text) => (
+              <a className="kuiLink" href="#/home">
+                {text}
+              </a>
+            )}
+          </FormattedMessage>
           <EuiSpacer size="s" />
           <EuiTitle size="l">
-            <h1>
-              <FormattedMessage
-                id="kbn.home.tutorial.addDataTitle"
-                defaultMessage="Add Data to Kibana"
-              />
-            </h1>
+            <FormattedMessage
+              id="kbn.home.tutorial.addDataTitle"
+              defaultMessage="Add Data to Kibana"
+              tagName="h1"
+            />
           </EuiTitle>
 
           <EuiSpacer size="m" />

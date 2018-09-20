@@ -140,12 +140,23 @@ export class StaticLookupFormatEditorComponent extends DefaultFormatEditor {
           size="s"
           onClick={this.addLookup}
         >
-          <FormattedMessage id="common.ui.fieldEditor.staticLookup.addEntryButton" defaultMessage="Add entry" />
+          <FormattedMessage
+            id="common.ui.fieldEditor.staticLookup.addEntryButton"
+            defaultMessage="Add entry"
+          >
+            {(text) => text}
+          </FormattedMessage>
         </EuiButton>
         <EuiSpacer size="l" />
         <EuiFormRow
-          label={intl.formatMessage(
-            { id: 'common.ui.fieldEditor.staticLookup.unknownKeyLabel', defaultMessage: 'Value for unknown key' })}
+          label={(
+            <FormattedMessage
+              id="common.ui.fieldEditor.staticLookup.unknownKeyLabel"
+              defaultMessage="Value for unknown key"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
         >
           <EuiFieldText
             value={formatParams.unknownKeyValue || ''}

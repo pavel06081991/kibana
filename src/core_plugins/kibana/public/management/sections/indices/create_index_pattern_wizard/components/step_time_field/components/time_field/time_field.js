@@ -49,12 +49,10 @@ export const TimeFieldComponent = ({
         label={
           <EuiFlexGroup gutterSize="xs" justifyContent="spaceBetween" alignItems="center">
             <EuiFlexItem grow={false}>
-              <span>
-                <FormattedMessage
-                  id="kbn.management.createIndexPattern.stepTime.fieldHeader"
-                  defaultMessage="Time Filter field name"
-                />
-              </span>
+              <FormattedMessage
+                id="kbn.management.createIndexPattern.stepTime.fieldHeader"
+                defaultMessage="Time Filter field name"
+              />
             </EuiFlexItem>
             <EuiFlexItem grow={false}>
               { isLoading ? (
@@ -68,7 +66,9 @@ export const TimeFieldComponent = ({
                     <FormattedMessage
                       id="kbn.management.createIndexPattern.stepTime.refreshButton"
                       defaultMessage="Refresh"
-                    />
+                    >
+                      {(text) => text}
+                    </FormattedMessage>
                   </EuiLink>
                 )
               }
@@ -77,18 +77,16 @@ export const TimeFieldComponent = ({
         }
         helpText={
           <div>
-            <p>
-              <FormattedMessage
-                id="kbn.management.createIndexPattern.stepTime.fieldLabel"
-                defaultMessage="The Time Filter will use this field to filter your data by time."
-              />
-            </p>
-            <p>
-              <FormattedMessage
-                id="kbn.management.createIndexPattern.stepTime.fieldWarningLabel"
-                defaultMessage="You can choose not to have a time field, but you will not be able to narrow down your data by a time range."
-              />
-            </p>
+            <FormattedMessage
+              id="kbn.management.createIndexPattern.stepTime.fieldLabel"
+              defaultMessage="The Time Filter will use this field to filter your data by time."
+              tagName="p"
+            />
+            <FormattedMessage
+              id="kbn.management.createIndexPattern.stepTime.fieldWarningLabel"
+              defaultMessage="You can choose not to have a time field, but you will not be able to narrow down your data by a time range."
+              tagName="p"
+            />
           </div>
         }
       >
@@ -121,12 +119,11 @@ export const TimeFieldComponent = ({
       </EuiFormRow>
       :
       <EuiText>
-        <p>
-          <FormattedMessage
-            id="kbn.management.createIndexPattern.stepTime.field.noTimeFieldsLabel"
-            defaultMessage="The indices which match this index pattern don't contain any time fields."
-          />
-        </p>
+        <FormattedMessage
+          id="kbn.management.createIndexPattern.stepTime.field.noTimeFieldsLabel"
+          defaultMessage="The indices which match this index pattern don't contain any time fields."
+          tagName="p"
+        />
       </EuiText>
     }
   </EuiForm>

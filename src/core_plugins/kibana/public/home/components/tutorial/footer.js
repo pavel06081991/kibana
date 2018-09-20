@@ -39,12 +39,11 @@ export function Footer({ url, label }) {
 
         <EuiFlexItem grow={false}>
           <EuiText>
-            <p>
-              <FormattedMessage
-                id="kbn.home.exploreYourDataDescription"
-                defaultMessage="When all steps are complete, you're ready to explore your data."
-              />
-            </p>
+            <FormattedMessage
+              id="kbn.home.exploreYourDataDescription"
+              defaultMessage="When all steps are complete, you're ready to explore your data."
+              tagName="p"
+            />
           </EuiText>
         </EuiFlexItem>
 

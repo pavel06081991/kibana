@@ -46,13 +46,17 @@ export const AdvancedOptionsComponent = ({
           <FormattedMessage
             id="kbn.management.createIndexPattern.stepTime.options.hideButton"
             defaultMessage="Hide advanced options"
-          />
+          >
+            {(text) => text}
+          </FormattedMessage>
         )
         : (
           <FormattedMessage
             id="kbn.management.createIndexPattern.stepTime.options.showButton"
             defaultMessage="Show advanced options"
-          />
+          >
+            {(text) => text}
+          </FormattedMessage>
         )
       }
 
@@ -61,17 +65,23 @@ export const AdvancedOptionsComponent = ({
     { isVisible ?
       <EuiForm>
         <EuiFormRow
-          label={intl.formatMessage({
-            id: 'kbn.management.createIndexPattern.stepTime.options.patternHeader',
-            defaultMessage: 'Custom index pattern ID'
-          })}
-          helpText={
+          label={(
+            <FormattedMessage
+              id="kbn.management.createIndexPattern.stepTime.options.patternHeader"
+              defaultMessage="Custom index pattern ID"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
+          helpText={(
             <FormattedMessage
               id="kbn.management.createIndexPattern.stepTime.options.patternLabel"
               defaultMessage="Kibana will provide a unique identifier for each index pattern. If you do not want to use this unique ID,
               enter a custom one."
-            />
-          }
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
         >
           <EuiFieldText
             name="indexPatternId"

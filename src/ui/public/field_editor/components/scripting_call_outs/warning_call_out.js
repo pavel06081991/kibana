@@ -27,56 +27,58 @@ import {
   EuiSpacer,
 } from '@elastic/eui';
 
-import { injectI18n, FormattedMessage } from '@kbn/i18n/react';
+import { FormattedMessage } from '@kbn/i18n/react';
 
-export const ScriptingWarningCallOutComponent = ({
+export const ScriptingWarningCallOut = ({
   isVisible = false,
-  intl,
 }) => {
   return isVisible ? (
     <Fragment>
       <EuiCallOut
-        title={intl.formatMessage({ id: 'common.ui.fieldEditor.warningCallOutHeader', defaultMessage: 'Proceed with caution' })}
+        title={(
+          <FormattedMessage
+            id="common.ui.fieldEditor.warningCallOutHeader"
+            defaultMessage="Proceed with caution"
+          >
+            {(text) => text}
+          </FormattedMessage>
+        )}
         color="warning"
         iconType="alert"
       >
-        <p>
-          <FormattedMessage
-            id="common.ui.fieldEditor.warningCallOutLabel.callOutDetail"
-            defaultMessage="Please familiarize yourself with {scripFields} and with {scriptsInAggregation} before using scripted fields."
-            values={{
-              scripFields: (
-                <EuiLink target="_window" href={getDocLink('scriptedFields.scriptFields')}>
-                  <FormattedMessage id="common.ui.fieldEditor.warningCallOutLabel.scripFieldsLink" defaultMessage="script fields" />&nbsp;
-                  <EuiIcon type="link" />
-                </EuiLink>
-              ),
-              scriptsInAggregation: (
-                <EuiLink target="_window" href={getDocLink('scriptedFields.scriptAggs')}>
-                  <FormattedMessage
-                    id="common.ui.fieldEditor.warningCallOutLabel.scriptsInAggregationLink"
-                    defaultMessage="scripts in aggregations"
-                  />&nbsp;
-                  <EuiIcon type="link" />
-                </EuiLink>
-              )
-            }}
-          />
-        </p>
-        <p>
-          <FormattedMessage
-            id="common.ui.fieldEditor.warningCallOut.descriptionLabel"
-            defaultMessage="Scripted fields can be used to display and aggregate calculated values. As such, they can be very slow, and
-            if done incorrectly, can cause Kibana to be unusable. There's no safety net here. If you make a typo, unexpected exceptions
-            will be thrown all over the place!"
-          />
-        </p>
+        <FormattedMessage
+          id="common.ui.fieldEditor.warningCallOutLabel.callOutDetail"
+          defaultMessage="Please familiarize yourself with {scripFields} and with {scriptsInAggregation} before using scripted fields."
+          values={{
+            scripFields: (
+              <EuiLink target="_window" href={getDocLink('scriptedFields.scriptFields')}>
+                <FormattedMessage id="common.ui.fieldEditor.warningCallOutLabel.scripFieldsLink" defaultMessage="script fields" />&nbsp;
+                <EuiIcon type="link" />
+              </EuiLink>
+            ),
+            scriptsInAggregation: (
+              <EuiLink target="_window" href={getDocLink('scriptedFields.scriptAggs')}>
+                <FormattedMessage
+                  id="common.ui.fieldEditor.warningCallOutLabel.scriptsInAggregationLink"
+                  defaultMessage="scripts in aggregations"
+                />&nbsp;
+                <EuiIcon type="link" />
+              </EuiLink>
+            )
+          }}
+          tagName="p"
+        />
+        <FormattedMessage
+          id="common.ui.fieldEditor.warningCallOut.descriptionLabel"
+          defaultMessage="Scripted fields can be used to display and aggregate calculated values. As such, they can be very slow, and
+          if done incorrectly, can cause Kibana to be unusable. There's no safety net here. If you make a typo, unexpected exceptions
+          will be thrown all over the place!"
+          tagName="p"
+        />
       </EuiCallOut>
       <EuiSpacer size="m" />
     </Fragment>
   ) : null;
 };
 
-ScriptingWarningCallOutComponent.displayName = 'ScriptingWarningCallOut';
-
-export const ScriptingWarningCallOut = injectI18n(ScriptingWarningCallOutComponent);
+ScriptingWarningCallOut.displayName = 'ScriptingWarningCallOut';

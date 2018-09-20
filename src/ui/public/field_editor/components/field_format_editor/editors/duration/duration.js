@@ -74,7 +74,14 @@ export class DurationFormatEditor extends DefaultFormatEditor {
     return (
       <Fragment>
         <EuiFormRow
-          label={<FormattedMessage id="common.ui.fieldEditor.duration.inputFormatLabel" defaultMessage="Input format"/>}
+          label={(
+            <FormattedMessage
+              id="common.ui.fieldEditor.duration.inputFormatLabel"
+              defaultMessage="Input format"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
           isInvalid={!!error}
           error={hasDecimalError ? null : error}
         >
@@ -93,7 +100,14 @@ export class DurationFormatEditor extends DefaultFormatEditor {
           />
         </EuiFormRow>
         <EuiFormRow
-          label={<FormattedMessage id="common.ui.fieldEditor.duration.outputFormatLabel" defaultMessage="Output format"/>}
+          label={(
+            <FormattedMessage
+              id="common.ui.fieldEditor.duration.outputFormatLabel"
+              defaultMessage="Output format"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
           isInvalid={!!error}
         >
           <EuiSelect
@@ -113,7 +127,14 @@ export class DurationFormatEditor extends DefaultFormatEditor {
         {
           !format.isHuman() ? (
             <EuiFormRow
-              label={<FormattedMessage id="common.ui.fieldEditor.duration.decimalPlacesLabel" defaultMessage="Decimal places"/>}
+              label={(
+                <FormattedMessage
+                  id="common.ui.fieldEditor.duration.decimalPlacesLabel"
+                  defaultMessage="Decimal places"
+                >
+                  {(text) => text}
+                </FormattedMessage>
+              )}
               isInvalid={!!error}
               error={hasDecimalError ? error : null}
             >

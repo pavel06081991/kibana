@@ -287,7 +287,9 @@ class IndexActionsContextMenuUi extends Component {
                 id="xpack.idxMgmt.indexActionsMenu.forceMerge.forceMergeDescription"
                 defaultMessage="You are about to force merge {mergedKeyword}"
                 values={{ mergedKeyword: oneIndexSelected ? 'this' : 'these' }}
-              />
+              >
+                {(text) => text}
+              </FormattedMessage>
               {' '}
               {entity}:
             </p>
@@ -304,16 +306,15 @@ class IndexActionsContextMenuUi extends Component {
               color="warning"
               iconType="help"
             >
-              <p>
-                <FormattedMessage
-                  id="xpack.idxMgmt.indexActionsMenu.forceMerge.forceMergeWarningDescription"
-                  defaultMessage="
-                    Force merging a large index or an index that is not read-only can
-                    potentially cause performance and stability issues in the cluster
-                    if it is not run properly (run against non-read-only indices) or run during peak hours.
-                  "
-                />
-              </p>
+              <FormattedMessage
+                id="xpack.idxMgmt.indexActionsMenu.forceMerge.forceMergeWarningDescription"
+                defaultMessage="
+                  Force merging a large index or an index that is not read-only can
+                  potentially cause performance and stability issues in the cluster
+                  if it is not run properly (run against non-read-only indices) or run during peak hours.
+                "
+                tagName="p"
+              />
             </EuiCallOut>
             <EuiSpacer size="m" />
             <EuiForm
@@ -379,7 +380,9 @@ class IndexActionsContextMenuUi extends Component {
                 id="xpack.idxMgmt.indexActionsMenu.deleteEntity.deleteDescription"
                 defaultMessage="You are about to delete {mergedKeyword}"
                 values={{ mergedKeyword: oneIndexSelected ? 'this' : 'these' }}
-              />
+              >
+                {(text) => text}
+              </FormattedMessage>
               {' '}
               {entity}:
             </p>
@@ -398,15 +401,14 @@ class IndexActionsContextMenuUi extends Component {
               color="warning"
               iconType="help"
             >
-              <p>
-                <FormattedMessage
-                  id="xpack.idxMgmt.indexActionsMenu.deleteEntity.deleteEntityWarningDescription"
-                  defaultMessage="
-                    This operation cannot be undone. Make sure you have appropriate
-                    backups.
-                  "
-                />
-              </p>
+              <FormattedMessage
+                id="xpack.idxMgmt.indexActionsMenu.deleteEntity.deleteEntityWarningDescription"
+                defaultMessage="
+                  This operation cannot be undone. Make sure you have appropriate
+                  backups.
+                "
+                tagName="p"
+              />
             </EuiCallOut>
           </div>
         </EuiConfirmModal>

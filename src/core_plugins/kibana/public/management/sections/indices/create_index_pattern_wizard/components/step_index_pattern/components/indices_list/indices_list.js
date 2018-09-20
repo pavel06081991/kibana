@@ -104,7 +104,9 @@ export class IndicesList extends Component {
           id="kbn.management.createIndexPattern.step.pagingLabel"
           defaultMessage="Rows per page: {perPage}"
           values={{ perPage }}
-        />
+        >
+          {(text) => text}
+        </FormattedMessage>
       </EuiButtonEmpty>
     );
 

@@ -153,10 +153,14 @@ class InstructionSetUi extends React.Component {
               onClick={onStatusCheck}
               isLoading={statusCheckState === StatusCheckStates.FETCHING}
             >
-              {statusCheckConfig.btnLabel || <FormattedMessage
-                id="kbn.home.tutorial.instractionSet.checkStatusButtonLabel"
-                defaultMessage="Check status"
-              />}
+              {statusCheckConfig.btnLabel || (
+                <FormattedMessage
+                  id="kbn.home.tutorial.instractionSet.checkStatusButtonLabel"
+                  defaultMessage="Check status"
+                >
+                  {(text) => text}
+                </FormattedMessage>
+              )}
             </EuiButton>
           </EuiFlexItem>
         </EuiFlexGroup>
@@ -232,12 +236,16 @@ class InstructionSetUi extends React.Component {
             onClick={this.handleToggleVisibility}
           >
             <span className={visibilityToggleClasses} />
-            <span className="kuiSideBarCollapsibleTitle__text">
-              <FormattedMessage
-                id="kbn.home.tutorial.instractionSet.customizeLabel"
-                defaultMessage="Customize your code snippets"
-              />
-            </span>
+            <FormattedMessage
+              id="kbn.home.tutorial.instractionSet.customizeLabel"
+              defaultMessage="Customize your code snippets"
+            >
+              {(text) => (
+                <span className="kuiSideBarCollapsibleTitle__text">
+                  {text}
+                </span>
+              )}
+            </FormattedMessage>
           </div>
         </div>
       );

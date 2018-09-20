@@ -64,14 +64,21 @@ export class SampleDataSetCard extends React.Component {
                 data-test-subj={`removeSampleDataSet${this.props.id}`}
               >
                 {this.props.isProcessing
-                  ? <FormattedMessage
-                    id="kbn.home.sampleDataSetCard.removingButtonLabel"
-                    defaultMessage="Removing"
-                  />
-                  : <FormattedMessage
-                    id="kbn.home.sampleDataSetCard.removeButtonLabel"
-                    defaultMessage="Remove"
-                  />}
+                  ? (
+                    <FormattedMessage
+                      id="kbn.home.sampleDataSetCard.removingButtonLabel"
+                      defaultMessage="Removing"
+                    >
+                      {(text) => text}
+                    </FormattedMessage>
+                  ) : (
+                    <FormattedMessage
+                      id="kbn.home.sampleDataSetCard.removeButtonLabel"
+                      defaultMessage="Remove"
+                    >
+                      {(text) => text}
+                    </FormattedMessage>
+                  )}
               </EuiButtonEmpty>
             </EuiFlexItem>
             <EuiFlexItem grow={false}>
@@ -82,7 +89,9 @@ export class SampleDataSetCard extends React.Component {
                 <FormattedMessage
                   id="kbn.home.sampleDataSetCard.viewDataButtonLabel"
                   defaultMessage="View data"
-                />
+                >
+                  {(text) => text}
+                </FormattedMessage>
               </EuiButton>
             </EuiFlexItem>
           </EuiFlexGroup>
@@ -98,15 +107,21 @@ export class SampleDataSetCard extends React.Component {
                 data-test-subj={`addSampleDataSet${this.props.id}`}
               >
                 {this.props.isProcessing
-                  ? <FormattedMessage
-                    id="kbn.home.sampleDataSetCard.addingButtonLabel"
-                    defaultMessage="Adding"
-                  />
-                  : <FormattedMessage
-                    id="kbn.home.sampleDataSetCard.addButtonLabel"
-                    defaultMessage="Add"
-                  />
-                }
+                  ? (
+                    <FormattedMessage
+                      id="kbn.home.sampleDataSetCard.addingButtonLabel"
+                      defaultMessage="Adding"
+                    >
+                      {(text) => text}
+                    </FormattedMessage>
+                  ) : (
+                    <FormattedMessage
+                      id="kbn.home.sampleDataSetCard.addButtonLabel"
+                      defaultMessage="Add"
+                    >
+                      {(text) => text}
+                    </FormattedMessage>
+                  )}
               </EuiButton>
             </EuiFlexItem>
           </EuiFlexGroup>
@@ -119,13 +134,12 @@ export class SampleDataSetCard extends React.Component {
               <EuiToolTip
                 position="top"
                 content={
-                  <p>
-                    <FormattedMessage
-                      id="kbn.home.sampleDataSetCard.default.unableToVerifyErrorMessage"
-                      defaultMessage="Unable to verify dataset status, error: {statusMsg}"
-                      values={{ statusMsg: this.props.statusMsg }}
-                    />
-                  </p>
+                  <FormattedMessage
+                    id="kbn.home.sampleDataSetCard.default.unableToVerifyErrorMessage"
+                    defaultMessage="Unable to verify dataset status, error: {statusMsg}"
+                    values={{ statusMsg: this.props.statusMsg }}
+                    tagName="p"
+                  />
                 }
               >
                 <EuiButton
@@ -135,7 +149,9 @@ export class SampleDataSetCard extends React.Component {
                   <FormattedMessage
                     id="kbn.home.sampleDataSetCard.default.addButtonLabel"
                     defaultMessage="Add"
-                  />
+                  >
+                    {(text) => text}
+                  </FormattedMessage>
                 </EuiButton>
               </EuiToolTip>
             </EuiFlexItem>

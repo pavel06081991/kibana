@@ -45,7 +45,9 @@ export const LoadingIndices = ({ ...rest }) => (
           <FormattedMessage
             id="kbn.management.createIndexPattern.step.loadingHeader"
             defaultMessage="Looking for matching indices..."
-          />
+          >
+            {(text) => text}
+          </FormattedMessage>
         </EuiTextColor>
       </EuiText>
 
@@ -54,7 +56,9 @@ export const LoadingIndices = ({ ...rest }) => (
           <FormattedMessage
             id="kbn.management.createIndexPattern.step.loadingLabel"
             defaultMessage="Just a sec..."
-          />
+          >
+            {(text) => text}
+          </FormattedMessage>
         </EuiTextColor>
       </EuiText>
     </EuiFlexItem>

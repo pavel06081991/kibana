@@ -119,12 +119,11 @@ export class FeatureDirectory extends React.Component {
       <EuiPage className="homPage">
         <EuiPageBody>
           <EuiTitle size="l">
-            <h1>
-              <FormattedMessage
-                id="kbn.home.directory.directoryTitle"
-                defaultMessage="Directory"
-              />
-            </h1>
+            <FormattedMessage
+              id="kbn.home.directory.directoryTitle"
+              defaultMessage="Directory"
+              tagName="h1"
+            />
           </EuiTitle>
           <EuiSpacer size="m" />
           <EuiTabs className="homeDirectoryTabs">

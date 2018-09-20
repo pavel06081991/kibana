@@ -83,7 +83,9 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl }) => {
               <FormattedMessage
                 id="kbn.home.addData.apm.addApmButtonLabel"
                 defaultMessage="Add APM"
-              />
+              >
+                {(text) => text}
+              </FormattedMessage>
             </EuiButton>
           }
         />
@@ -109,7 +111,9 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl }) => {
                 <FormattedMessage
                   id="kbn.home.addData.logging.addLogDataButtonLabel"
                   defaultMessage="Add log data"
-                />
+                >
+                  {(text) => text}
+                </FormattedMessage>
               </EuiButton>
             }
           />
@@ -129,7 +133,9 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl }) => {
                 <FormattedMessage
                   id="kbn.home.addData.metrics.addMetricsDataButtonLabel"
                   defaultMessage="Add metric data"
-                />
+                >
+                  {(text) => text}
+                </FormattedMessage>
               </EuiButton>
             }
           />
@@ -149,7 +155,9 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl }) => {
                 <FormattedMessage
                   id="kbn.home.addData.security.addSecurityEventsButtonLabel"
                   defaultMessage="Add security events"
-                />
+                >
+                  {(text) => text}
+                </FormattedMessage>
               </EuiButton>
             }
           />
@@ -165,20 +173,18 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl }) => {
       <EuiFlexGroup>
         <EuiFlexItem>
           <EuiTitle>
-            <h3>
-              <FormattedMessage
-                id="kbn.home.addData.addDataToKibanaTitle"
-                defaultMessage="Add Data to Kibana"
-              />
-            </h3>
+            <FormattedMessage
+              id="kbn.home.addData.addDataToKibanaTitle"
+              defaultMessage="Add Data to Kibana"
+              tagName="h3"
+            />
           </EuiTitle>
           <EuiText>
-            <p>
-              <FormattedMessage
-                id="kbn.home.addData.addDataToKibanaDescription"
-                defaultMessage="Use these solutions to quickly turn your data into pre-built dashboards and monitoring systems."
-              />
-            </p>
+            <FormattedMessage
+              id="kbn.home.addData.addDataToKibanaDescription"
+              defaultMessage="Use these solutions to quickly turn your data into pre-built dashboards and monitoring systems."
+              tagName="p"
+            />
           </EuiText>
         </EuiFlexItem>
       </EuiFlexGroup>
@@ -192,12 +198,16 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl }) => {
       <EuiFlexGroup justifyContent="spaceAround">
         <EuiFlexItem className={footerItemClasses}>
           <EuiText>
-            <strong style={{ height: 38 }}>
-              <FormattedMessage
-                id="kbn.home.addData.sampleDataTitle"
-                defaultMessage="Sample Data"
-              />
-            </strong>
+            <FormattedMessage
+              id="kbn.home.addData.sampleDataTitle"
+              defaultMessage="Sample Data"
+            >
+              {(text) => (
+                <strong style={{ height: 38 }}>
+                  {text}
+                </strong>
+              )}
+            </FormattedMessage>
             <EuiLink
               style={{ marginLeft: 8 }}
               href="#/home/tutorial_directory/sampleData"
@@ -205,18 +215,24 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl }) => {
               <FormattedMessage
                 id="kbn.home.addData.sampleDataLink"
                 defaultMessage="Load a data set and a Kibana dashboard"
-              />
+              >
+                {(text) => text}
+              </FormattedMessage>
             </EuiLink>
           </EuiText>
         </EuiFlexItem>
         <EuiFlexItem className={footerItemClasses}>
           <EuiText>
-            <strong style={{ height: 38 }}>
-              <FormattedMessage
-                id="kbn.home.addData.yourDataTitle"
-                defaultMessage="Your Data"
-              />
-            </strong>
+            <FormattedMessage
+              id="kbn.home.addData.yourDataTitle"
+              defaultMessage="Your Data"
+            >
+              {(text) => (
+                <strong style={{ height: 38 }}>
+                  {text}
+                </strong>
+              )}
+            </FormattedMessage>
             <EuiLink
               style={{ marginLeft: 8 }}
               href="#/management/kibana/index"
@@ -224,7 +240,9 @@ const AddDataUi = ({ apmUiEnabled, isNewKibanaInstance, intl }) => {
               <FormattedMessage
                 id="kbn.home.addData.yourDataLink"
                 defaultMessage="Connect to your Elasticsearch index"
-              />
+              >
+                {(text) => text}
+              </FormattedMessage>
             </EuiLink>
           </EuiText>
         </EuiFlexItem>

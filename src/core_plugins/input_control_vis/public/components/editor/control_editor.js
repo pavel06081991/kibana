@@ -102,7 +102,14 @@ class ControlEditorUi extends Component {
       <EuiForm>
         <EuiFormRow
           id={labelId}
-          label={<FormattedMessage id="inputControl.editor.controlEditor.controlLabel" defaultMessage="Control Label"/>}
+          label={(
+            <FormattedMessage
+              id="inputControl.editor.controlEditor.controlLabel"
+              defaultMessage="Control Label"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
         >
           <EuiFieldText
             value={this.props.controlParams.label}

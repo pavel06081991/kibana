@@ -192,7 +192,12 @@ export class ColorFormatEditorComponent extends DefaultFormatEditor {
           size="s"
           onClick={this.addColor}
         >
-          <FormattedMessage id="common.ui.fieldEditor.color.addColorButton" defaultMessage="Add color" />
+          <FormattedMessage
+            id="common.ui.fieldEditor.color.addColorButton"
+            defaultMessage="Add color"
+          >
+            {(text) => text}
+          </FormattedMessage>
         </EuiButton>
         <EuiSpacer size="l" />
       </Fragment>

@@ -40,19 +40,18 @@ const ServerState = ({
   >
     <EuiFlexItem grow={false}>
       <EuiTitle>
-        <h2>
-          <FormattedMessage
-            id="statusPage.serverStatus.statusTitle"
-            defaultMessage="Kibana status is {kibanaStatus}"
-            values={{
-              kibanaStatus: (
-                <EuiBadge color={serverState.uiColor}>
-                  {serverState.title}
-                </EuiBadge>
-              ),
-            }}
-          />
-        </h2>
+        <FormattedMessage
+          id="statusPage.serverStatus.statusTitle"
+          defaultMessage="Kibana status is {kibanaStatus}"
+          values={{
+            kibanaStatus: (
+              <EuiBadge color={serverState.uiColor}>
+                {serverState.title}
+              </EuiBadge>
+            ),
+          }}
+          tagName="h2"
+        />
       </EuiTitle>
     </EuiFlexItem>
     <EuiFlexItem grow={false}>

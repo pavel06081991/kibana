@@ -118,12 +118,11 @@ export class EditSettingsJson extends React.PureComponent {
         <EuiFlexGroup justifyContent="spaceBetween" alignItems="center">
           <EuiFlexItem>
             <EuiTitle>
-              <p>
-                <FormattedMessage
-                  id="xpack.idxMgmt.editSettingsJSON.saveJSONDescription"
-                  defaultMessage="Edit, then save your JSON"
-                />
-              </p>
+              <FormattedMessage
+                id="xpack.idxMgmt.editSettingsJSON.saveJSONDescription"
+                defaultMessage="Edit, then save your JSON"
+                tagName="p"
+              />
             </EuiTitle>
           </EuiFlexItem>
           <EuiFlexItem grow={false}>
@@ -137,7 +136,9 @@ export class EditSettingsJson extends React.PureComponent {
               <FormattedMessage
                 id="xpack.idxMgmt.editSettingsJSON.saveJSONButtonLabel"
                 defaultMessage="Save"
-              />
+              >
+                {(text) => text}
+              </FormattedMessage>
             </EuiButton>
           </EuiFlexItem>
         </EuiFlexGroup>
@@ -150,7 +151,9 @@ export class EditSettingsJson extends React.PureComponent {
           <FormattedMessage
             id="xpack.idxMgmt.editSettingsJSON.settingsReferenceLinkText"
             defaultMessage="Settings reference"
-          />
+          >
+            {(text) => text}
+          </FormattedMessage>
         </EuiLink>
         <EuiSpacer />
         <div

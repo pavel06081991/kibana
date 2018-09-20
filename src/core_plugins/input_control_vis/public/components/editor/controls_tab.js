@@ -186,7 +186,12 @@ class ControlsTabUi extends Component {
                     defaultMessage: 'Add control'
                   })}
                 >
-                  <FormattedMessage id="inputControl.editor.controlsTab.addButtonLabel" defaultMessage="Add"/>
+                  <FormattedMessage
+                    id="inputControl.editor.controlsTab.addButtonLabel"
+                    defaultMessage="Add"
+                  >
+                    {(text) => text}
+                  </FormattedMessage>
                 </EuiButton>
               </EuiFormRow>
             </EuiFlexItem>

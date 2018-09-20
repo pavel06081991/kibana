@@ -127,7 +127,16 @@ export class UrlFormatEditor extends DefaultFormatEditor {
           isVisible={this.state.showUrlTemplateHelp}
           onClose={this.hideUrlTemplateHelp}
         />
-        <EuiFormRow label={<FormattedMessage id="common.ui.fieldEditor.url.typeLabel" defaultMessage="Type"/>}>
+        <EuiFormRow
+          label={(
+            <FormattedMessage
+              id="common.ui.fieldEditor.url.typeLabel"
+              defaultMessage="Type"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
+        >
           <EuiSelect
             data-test-subj="urlEditorType"
             value={formatParams.type}
@@ -144,11 +153,33 @@ export class UrlFormatEditor extends DefaultFormatEditor {
         </EuiFormRow>
 
         {formatParams.type === 'a' ? (
-          <EuiFormRow label={<FormattedMessage id="common.ui.fieldEditor.url.openTabLabel" defaultMessage="Open in a new tab"/>}>
+          <EuiFormRow
+            label={(
+              <FormattedMessage
+                id="common.ui.fieldEditor.url.openTabLabel"
+                defaultMessage="Open in a new tab"
+              >
+                {(text) => text}
+              </FormattedMessage>
+            )}
+          >
             <EuiSwitch
               label={formatParams.openLinkInCurrentTab
-                ? <FormattedMessage id="common.ui.fieldEditor.url.offLabel" defaultMessage="Off"/>
-                : <FormattedMessage id="common.ui.fieldEditor.url.onLabel" defaultMessage="On"/>}
+                ? (
+                  <FormattedMessage
+                    id="common.ui.fieldEditor.url.offLabel"
+                    defaultMessage="Off"
+                  >
+                    {(text) => text}
+                  </FormattedMessage>
+                ) : (
+                  <FormattedMessage
+                    id="common.ui.fieldEditor.url.onLabel"
+                    defaultMessage="On"
+                  >
+                    {(text) => text}
+                  </FormattedMessage>
+                )}
               checked={!formatParams.openLinkInCurrentTab}
               onChange={(e) => {
                 this.onChange({ openLinkInCurrentTab: !e.target.checked });
@@ -158,10 +189,22 @@ export class UrlFormatEditor extends DefaultFormatEditor {
         ) : null}
 
         <EuiFormRow
-          label={<FormattedMessage id="common.ui.fieldEditor.url.urlTemplateLabel" defaultMessage="URL template"/>}
+          label={(
+            <FormattedMessage
+              id="common.ui.fieldEditor.url.urlTemplateLabel"
+              defaultMessage="URL template"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
           helpText={(
             <EuiLink onClick={this.showUrlTemplateHelp}>
-              <FormattedMessage id="common.ui.fieldEditor.url.template.helpButton" defaultMessage="URL template help" />
+              <FormattedMessage
+                id="common.ui.fieldEditor.url.template.helpButton"
+                defaultMessage="URL template help"
+              >
+                {(text) => text}
+              </FormattedMessage>
             </EuiLink>)}
           isInvalid={!!error}
           error={error}
@@ -176,8 +219,24 @@ export class UrlFormatEditor extends DefaultFormatEditor {
         </EuiFormRow>
 
         <EuiFormRow
-          label={<FormattedMessage id="common.ui.fieldEditor.url.labelTemplateLabel" defaultMessage="Label template"/>}
-          helpText={(<EuiLink onClick={this.showLabelTemplateHelp}>Label template help</EuiLink>)}
+          label={(
+            <FormattedMessage
+              id="common.ui.fieldEditor.url.labelTemplateLabel"
+              defaultMessage="Label template"
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
+          helpText={(
+            <EuiLink onClick={this.showLabelTemplateHelp}>
+              <FormattedMessage
+                id="common.ui.fieldEditor.url.labelTemplateHelpText"
+                defaultMessage="Label template help"
+              >
+                {(text) => text}
+              </FormattedMessage>
+            </EuiLink>
+          )}
           isInvalid={!!error}
           error={error}
         >

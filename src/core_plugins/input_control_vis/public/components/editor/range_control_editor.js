@@ -64,10 +64,14 @@ export function RangeControlEditor(props) {
 
       <EuiFormRow
         id={stepSizeId}
-        label={<FormattedMessage
-          id="inputControl.editor.rangeControl.stepSizeLabel"
-          defaultMessage="Step Size"
-        />}
+        label={(
+          <FormattedMessage
+            id="inputControl.editor.rangeControl.stepSizeLabel"
+            defaultMessage="Step Size"
+          >
+            {(text) => text}
+          </FormattedMessage>
+        )}
       >
         <EuiFieldNumber
           value={props.controlParams.options.step}
@@ -78,10 +82,14 @@ export function RangeControlEditor(props) {
 
       <EuiFormRow
         id={decimalPlacesId}
-        label={<FormattedMessage
-          id="inputControl.editor.rangeControl.decimalPlacesLabel"
-          defaultMessage="Decimal Places"
-        />}
+        label={(
+          <FormattedMessage
+            id="inputControl.editor.rangeControl.decimalPlacesLabel"
+            defaultMessage="Decimal Places"
+          >
+            {(text) => text}
+          </FormattedMessage>
+        )}
       >
         <EuiFieldNumber
           min={0}

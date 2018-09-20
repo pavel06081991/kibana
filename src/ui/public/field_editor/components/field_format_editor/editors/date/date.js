@@ -58,21 +58,28 @@ export class DateFormatEditor extends DefaultFormatEditor {
     return (
       <Fragment>
         <EuiFormRow
-          label={
+          label={(
             <FormattedMessage
               id="common.ui.fieldEditor.date.momentLabel"
               defaultMessage="Moment.js format pattern (Default: {defaultPattern})"
               values={{
                 defaultPattern: <EuiCode>{defaultPattern}</EuiCode>
               }}
-            />
-          }
+            >
+              {(text) => text}
+            </FormattedMessage>
+          )}
           isInvalid={!!error}
           error={error}
           helpText={
             <span>
               <EuiLink target="_window" href="http://momentjs.com/">
-                <FormattedMessage id="common.ui.fieldEditor.date.documentationLabel" defaultMessage="Documentation" />&nbsp;
+                <FormattedMessage
+                  id="common.ui.fieldEditor.date.documentationLabel"
+                  defaultMessage="Documentation"
+                >
+                  {(text) => text}
+                </FormattedMessage>&nbsp;
                 <EuiIcon type="link" />
               </EuiLink>
             </span>

@@ -124,12 +124,11 @@ export class TableComponent extends Component {
           }
 
           return (
-            <em>
-              <FormattedMessage
-                id="kbn.management.editIndexPattern.source.table.notMatchedLabel"
-                defaultMessage="The source filter doesn't match any known fields."
-              />
-            </em>
+            <FormattedMessage
+              id="kbn.management.editIndexPattern.source.table.notMatchedLabel"
+              defaultMessage="The source filter doesn't match any known fields."
+              tagName="em"
+            />
           );
         },
       },
