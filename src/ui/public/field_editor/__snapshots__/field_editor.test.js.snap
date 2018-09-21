@@ -3,13 +3,12 @@
 exports[`FieldEditor should render create new scripted field correctly 1`] = `
 <div>
   <eui-text>
-    <h3>
-      <FormattedMessage
-        defaultMessage="Create scripted field"
-        id="common.ui.fieldEditor.createHeader"
-        values={Object {}}
-      />
-    </h3>
+    <FormattedMessage
+      defaultMessage="Create scripted field"
+      id="common.ui.fieldEditor.createHeader"
+      tagName="h3"
+      values={Object {}}
+    />
   </eui-text>
   <eui-spacer
     size="m"
@@ -111,7 +110,9 @@ exports[`FieldEditor should render create new scripted field correctly 1`] = `
             defaultMessage="Formatting allows you to control the way that specific values are displayed. It can also cause values to be completely changed and prevent highlighting in Discover from working."
             id="common.ui.fieldEditor.formatLabel"
             values={Object {}}
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
         label={
           <FormattedMessage
@@ -124,7 +125,9 @@ exports[`FieldEditor should render create new scripted field correctly 1`] = `
                 </eui-code>,
               }
             }
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
       >
         <eui-select
@@ -239,17 +242,16 @@ exports[`FieldEditor should render create new scripted field correctly 1`] = `
 exports[`FieldEditor should render edit scripted field correctly 1`] = `
 <div>
   <eui-text>
-    <h3>
-      <FormattedMessage
-        defaultMessage="Edit {fieldName}"
-        id="common.ui.fieldEditor.editHeader"
-        values={
-          Object {
-            "fieldName": "test",
-          }
+    <FormattedMessage
+      defaultMessage="Edit {fieldName}"
+      id="common.ui.fieldEditor.editHeader"
+      tagName="h3"
+      values={
+        Object {
+          "fieldName": "test",
         }
-      />
-    </h3>
+      }
+    />
   </eui-text>
   <eui-spacer
     size="m"
@@ -347,7 +349,9 @@ exports[`FieldEditor should render edit scripted field correctly 1`] = `
             defaultMessage="Formatting allows you to control the way that specific values are displayed. It can also cause values to be completely changed and prevent highlighting in Discover from working."
             id="common.ui.fieldEditor.formatLabel"
             values={Object {}}
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
         label={
           <FormattedMessage
@@ -360,7 +364,9 @@ exports[`FieldEditor should render edit scripted field correctly 1`] = `
                 </eui-code>,
               }
             }
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
       >
         <eui-select
@@ -496,13 +502,12 @@ exports[`FieldEditor should render edit scripted field correctly 1`] = `
 exports[`FieldEditor should show conflict field warning 1`] = `
 <div>
   <eui-text>
-    <h3>
-      <FormattedMessage
-        defaultMessage="Create scripted field"
-        id="common.ui.fieldEditor.createHeader"
-        values={Object {}}
-      />
-    </h3>
+    <FormattedMessage
+      defaultMessage="Create scripted field"
+      id="common.ui.fieldEditor.createHeader"
+      tagName="h3"
+      values={Object {}}
+    />
   </eui-text>
   <eui-spacer
     size="m"
@@ -566,16 +571,17 @@ exports[`FieldEditor should show conflict field warning 1`] = `
                 "fieldName": <eui-code>
                   foobar
                 </eui-code>,
-                "mappingConflict": <strong>
-                  <FormattedMessage
-                    defaultMessage="Mapping Conflict:"
-                    id="common.ui.fieldEditor.mappingConflictLabel.mappingConflictLabel"
-                    values={Object {}}
-                  />
-                </strong>,
+                "mappingConflict": <FormattedMessage
+                  defaultMessage="Mapping Conflict:"
+                  id="common.ui.fieldEditor.mappingConflictLabel.mappingConflictLabel"
+                  tagName="strong"
+                  values={Object {}}
+                />,
               }
             }
-          />
+          >
+            [Function]
+          </FormattedMessage>
         </span>
       }
       isInvalid={false}
@@ -648,7 +654,9 @@ exports[`FieldEditor should show conflict field warning 1`] = `
             defaultMessage="Formatting allows you to control the way that specific values are displayed. It can also cause values to be completely changed and prevent highlighting in Discover from working."
             id="common.ui.fieldEditor.formatLabel"
             values={Object {}}
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
         label={
           <FormattedMessage
@@ -661,7 +669,9 @@ exports[`FieldEditor should show conflict field warning 1`] = `
                 </eui-code>,
               }
             }
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
       >
         <eui-select
@@ -776,17 +786,16 @@ exports[`FieldEditor should show conflict field warning 1`] = `
 exports[`FieldEditor should show deprecated lang warning 1`] = `
 <div>
   <eui-text>
-    <h3>
-      <FormattedMessage
-        defaultMessage="Edit {fieldName}"
-        id="common.ui.fieldEditor.editHeader"
-        values={
-          Object {
-            "fieldName": "test",
-          }
+    <FormattedMessage
+      defaultMessage="Edit {fieldName}"
+      id="common.ui.fieldEditor.editHeader"
+      tagName="h3"
+      values={
+        Object {
+          "fieldName": "test",
         }
-      />
-    </h3>
+      }
+    />
   </eui-text>
   <eui-spacer
     size="m"
@@ -842,13 +851,14 @@ exports[`FieldEditor should show deprecated lang warning 1`] = `
             type="alert"
           />
            
-          <strong>
-            <FormattedMessage
-              defaultMessage="Deprecation Warning:"
-              id="common.ui.fieldEditor.warningHeader"
-              values={Object {}}
-            />
-          </strong>
+          <FormattedMessage
+            defaultMessage="Deprecation Warning:"
+            id="common.ui.fieldEditor.warningHeader"
+            tagName="strong"
+            values={Object {}}
+          >
+            [Function]
+          </FormattedMessage>
            
           <FormattedMessage
             defaultMessage="{language} is deprecated and support will be removed in the next major version of Kibana and Elasticsearch. We recommend using {painlessLink} for new scripted fields."
@@ -866,7 +876,9 @@ exports[`FieldEditor should show deprecated lang warning 1`] = `
                 </eui-link>,
               }
             }
-          />
+          >
+            [Function]
+          </FormattedMessage>
         </span>
       }
       label="Language"
@@ -958,7 +970,9 @@ exports[`FieldEditor should show deprecated lang warning 1`] = `
             defaultMessage="Formatting allows you to control the way that specific values are displayed. It can also cause values to be completely changed and prevent highlighting in Discover from working."
             id="common.ui.fieldEditor.formatLabel"
             values={Object {}}
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
         label={
           <FormattedMessage
@@ -971,7 +985,9 @@ exports[`FieldEditor should show deprecated lang warning 1`] = `
                 </eui-code>,
               }
             }
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
       >
         <eui-select

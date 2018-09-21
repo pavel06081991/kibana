@@ -26,19 +26,11 @@ exports[`LoadingState should render normally 1`] = `
           color="subdued"
           component="span"
         >
-          <h2
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <FormattedMessage
-              defaultMessage="Checking for Elasticsearch data"
-              id="kbn.management.createIndexPattern.loadingState.checkingLabel"
-              values={Object {}}
-            />
-          </h2>
+          <FormattedMessage
+            defaultMessage="Checking for Elasticsearch data"
+            id="kbn.management.createIndexPattern.loadingState.checkingLabel"
+            values={Object {}}
+          />
         </EuiTextColor>
       </EuiTitle>
     </EuiFlexItem>

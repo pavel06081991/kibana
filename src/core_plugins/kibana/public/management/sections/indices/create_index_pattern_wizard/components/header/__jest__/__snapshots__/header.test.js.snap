@@ -8,13 +8,12 @@ exports[`Header should render normally 1`] = `
   <EuiTitle
     size="m"
   >
-    <h1>
-      <FormattedMessage
-        defaultMessage="Create index pattern"
-        id="kbn.management.createIndexPatternHeader"
-        values={Object {}}
-      />
-    </h1>
+    <FormattedMessage
+      defaultMessage="Create index pattern"
+      id="kbn.management.createIndexPatternHeader"
+      tagName="h1"
+      values={Object {}}
+    />
   </EuiTitle>
   <EuiFlexGroup
     alignItems="flexEnd"
@@ -58,7 +57,9 @@ exports[`Header should render normally 1`] = `
             defaultMessage="Include system indices"
             id="kbn.management.createIndexPattern.includeSystemIndicesToggleSwitch"
             values={Object {}}
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
         onChange={[Function]}
       />
@@ -78,13 +79,12 @@ exports[`Header should render without including system indices 1`] = `
   <EuiTitle
     size="m"
   >
-    <h1>
-      <FormattedMessage
-        defaultMessage="Create index pattern"
-        id="kbn.management.createIndexPatternHeader"
-        values={Object {}}
-      />
-    </h1>
+    <FormattedMessage
+      defaultMessage="Create index pattern"
+      id="kbn.management.createIndexPatternHeader"
+      tagName="h1"
+      values={Object {}}
+    />
   </EuiTitle>
   <EuiFlexGroup
     alignItems="flexEnd"
@@ -128,7 +128,9 @@ exports[`Header should render without including system indices 1`] = `
             defaultMessage="Include system indices"
             id="kbn.management.createIndexPattern.includeSystemIndicesToggleSwitch"
             values={Object {}}
-          />
+          >
+            [Function]
+          </FormattedMessage>
         }
         onChange={[Function]}
       />

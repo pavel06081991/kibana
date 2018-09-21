@@ -27,7 +27,9 @@ exports[`renders RangeControlEditor 1`] = `
         defaultMessage="Step Size"
         id="inputControl.editor.rangeControl.stepSizeLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiFieldNumber
@@ -49,7 +51,9 @@ exports[`renders RangeControlEditor 1`] = `
         defaultMessage="Decimal Places"
         id="inputControl.editor.rangeControl.decimalPlacesLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiFieldNumber

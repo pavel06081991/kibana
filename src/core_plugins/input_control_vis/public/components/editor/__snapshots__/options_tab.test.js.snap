@@ -16,7 +16,9 @@ exports[`renders OptionsTab 1`] = `
           defaultMessage="Update Kibana filters on each change"
           id="inputControl.editor.optionsTab.updateFilterLabel"
           values={Object {}}
-        />
+        >
+          [Function]
+        </FormattedMessage>
       }
       onChange={[Function]}
     />
@@ -35,7 +37,9 @@ exports[`renders OptionsTab 1`] = `
           defaultMessage="Use time filter"
           id="inputControl.editor.optionsTab.useTimeFielterLabel"
           values={Object {}}
-        />
+        >
+          [Function]
+        </FormattedMessage>
       }
       onChange={[Function]}
     />
@@ -53,7 +57,9 @@ exports[`renders OptionsTab 1`] = `
           defaultMessage="Pin filters to global state"
           id="inputControl.editor.optionsTab.pinFieltersLabel"
           values={Object {}}
-        />
+        >
+          [Function]
+        </FormattedMessage>
       }
       onChange={[Function]}
     />

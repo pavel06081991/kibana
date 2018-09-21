@@ -13,7 +13,9 @@ exports[`StringFormatEditor should render normally 1`] = `
         defaultMessage="Transform"
         id="common.ui.fieldEditor.string.transformLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiSelect

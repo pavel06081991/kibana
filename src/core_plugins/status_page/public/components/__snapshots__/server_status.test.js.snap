@@ -22,22 +22,21 @@ exports[`render 1`] = `
     <EuiTitle
       size="m"
     >
-      <h2>
-        <FormattedMessage
-          defaultMessage="Kibana status is {kibanaStatus}"
-          id="statusPage.serverStatus.statusTitle"
-          values={
-            Object {
-              "kibanaStatus": <EuiBadge
-                color="secondary"
-                iconSide="left"
-              >
-                Green
-              </EuiBadge>,
-            }
+      <FormattedMessage
+        defaultMessage="Kibana status is {kibanaStatus}"
+        id="statusPage.serverStatus.statusTitle"
+        tagName="h2"
+        values={
+          Object {
+            "kibanaStatus": <EuiBadge
+              color="secondary"
+              iconSide="left"
+            >
+              Green
+            </EuiBadge>,
           }
-        />
-      </h2>
+        }
+      />
     </EuiTitle>
   </EuiFlexItem>
   <EuiFlexItem

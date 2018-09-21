@@ -15,33 +15,30 @@ exports[`UrlTemplateFlyout should render normally 1`] = `
     <EuiText
       grow={true}
     >
-      <h3>
-        <FormattedMessage
-          defaultMessage="Url Template"
-          id="common.ui.fieldEditor.urlTemplateHeader"
-          values={Object {}}
-        />
-      </h3>
-      <p>
-        <FormattedMessage
-          defaultMessage="If a field only contains part of a URL then a {strongUrlTemplate} can be used to format the value as a complete URL. The format is a string which uses double curly brace notation {doubleCurlyBraces} to inject values. The following values can be accessed:"
-          id="common.ui.fieldEditor.urlTemplateLabel.fieldDetail"
-          values={
-            Object {
-              "doubleCurlyBraces": <EuiCode>
-                {{ }}
-              </EuiCode>,
-              "strongUrlTemplate": <strong>
-                <FormattedMessage
-                  defaultMessage="Url Template"
-                  id="common.ui.fieldEditor.urlTemplateLabel.strongUrlTemplateLabel"
-                  values={Object {}}
-                />
-              </strong>,
-            }
+      <FormattedMessage
+        defaultMessage="Url Template"
+        id="common.ui.fieldEditor.urlTemplateHeader"
+        tagName="h3"
+        values={Object {}}
+      />
+      <FormattedMessage
+        defaultMessage="If a field only contains part of a URL then a {strongUrlTemplate} can be used to format the value as a complete URL. The format is a string which uses double curly brace notation {doubleCurlyBraces} to inject values. The following values can be accessed:"
+        id="common.ui.fieldEditor.urlTemplateLabel.fieldDetail"
+        tagName="p"
+        values={
+          Object {
+            "doubleCurlyBraces": <EuiCode>
+              {{ }}
+            </EuiCode>,
+            "strongUrlTemplate": <FormattedMessage
+              defaultMessage="Url Template"
+              id="common.ui.fieldEditor.urlTemplateLabel.strongUrlTemplateLabel"
+              tagName="strong"
+              values={Object {}}
+            />,
           }
-        />
-      </p>
+        }
+      />
       <ul>
         <li>
           <EuiCode>
@@ -66,13 +63,12 @@ exports[`UrlTemplateFlyout should render normally 1`] = `
           />
         </li>
       </ul>
-      <h4>
-        <FormattedMessage
-          defaultMessage="Examples"
-          id="common.ui.fieldEditor.urlTemplate.examplesHeader"
-          values={Object {}}
-        />
-      </h4>
+      <FormattedMessage
+        defaultMessage="Examples"
+        id="common.ui.fieldEditor.urlTemplate.examplesHeader"
+        tagName="h4"
+        values={Object {}}
+      />
       <EuiBasicTable
         columns={
           Array [
