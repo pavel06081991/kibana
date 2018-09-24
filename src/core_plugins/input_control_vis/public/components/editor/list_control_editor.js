@@ -19,7 +19,7 @@
 
 import PropTypes from 'prop-types';
 import React, { Component }  from 'react';
-import { IndexPatternSelect } from './index_pattern_select';
+import { IndexPatternSelectFormRow } from './index_pattern_select_form_row';
 import { FieldSelect } from './field_select';
 import { FormattedMessage } from '@kbn/i18n/react';
 
@@ -254,11 +254,9 @@ export class ListControlEditor extends Component {
     return (
       <div>
 
-        <IndexPatternSelect
+        <IndexPatternSelectFormRow
           indexPatternId={this.props.controlParams.indexPattern}
           onChange={this.props.handleIndexPatternChange}
-          getIndexPatterns={this.props.getIndexPatterns}
-          getIndexPattern={this.props.getIndexPattern}
           controlIndex={this.props.controlIndex}
         />
 
@@ -279,7 +277,6 @@ export class ListControlEditor extends Component {
 }
 
 ListControlEditor.propTypes = {
-  getIndexPatterns: PropTypes.func.isRequired,
   getIndexPattern: PropTypes.func.isRequired,
   controlIndex: PropTypes.number.isRequired,
   controlParams: PropTypes.object.isRequired,
