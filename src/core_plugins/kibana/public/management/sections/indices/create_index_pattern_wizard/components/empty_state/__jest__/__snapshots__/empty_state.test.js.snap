@@ -26,19 +26,11 @@ exports[`EmptyState should render normally 1`] = `
           color="subdued"
           component="span"
         >
-          <h2
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
-          >
-            <FormattedMessage
-              defaultMessage="Couldn't find any Elasticsearch data"
-              id="kbn.management.createIndexPattern.emptyStateHeader"
-              values={Object {}}
-            />
-          </h2>
+          <FormattedMessage
+            defaultMessage="Couldn't find any Elasticsearch data"
+            id="kbn.management.createIndexPattern.emptyStateHeader"
+            values={Object {}}
+          />
         </EuiTextColor>
       </EuiTitle>
       <EuiSpacer
@@ -47,48 +39,53 @@ exports[`EmptyState should render normally 1`] = `
       <EuiText
         grow={true}
       >
-        <p>
-          <FormattedMessage
-            defaultMessage="{needToIndex} {learnHowLink} or {getStartedLink}"
-            id="kbn.management.createIndexPattern.emptyStateLabel.emptyStateDetail"
-            values={
-              Object {
-                "getStartedLink": <EuiLink
-                  color="primary"
-                  href="#/home/tutorial_directory/sampleData"
-                  type="button"
+        <FormattedMessage
+          defaultMessage="{needToIndex} {learnHowLink} or {getStartedLink}"
+          id="kbn.management.createIndexPattern.emptyStateLabel.emptyStateDetail"
+          tagName="p"
+          values={
+            Object {
+              "getStartedLink": <EuiLink
+                color="primary"
+                href="#/home/tutorial_directory/sampleData"
+                type="button"
+              >
+                <FormattedMessage
+                  defaultMessage="get started with some sample data sets."
+                  id="kbn.management.createIndexPattern.emptyStateLabel.getStartedLink"
+                  values={Object {}}
                 >
-                  <FormattedMessage
-                    defaultMessage="get started with some sample data sets."
-                    id="kbn.management.createIndexPattern.emptyStateLabel.getStartedLink"
-                    values={Object {}}
-                  />
-                </EuiLink>,
-                "learnHowLink": <EuiLink
-                  color="primary"
-                  href="#/home/tutorial_directory"
-                  type="button"
+                  [Function]
+                </FormattedMessage>
+              </EuiLink>,
+              "learnHowLink": <EuiLink
+                color="primary"
+                href="#/home/tutorial_directory"
+                type="button"
+              >
+                <FormattedMessage
+                  defaultMessage="Learn how"
+                  id="kbn.management.createIndexPattern.emptyStateLabel.learnHowLink"
+                  values={Object {}}
                 >
-                  <FormattedMessage
-                    defaultMessage="Learn how"
-                    id="kbn.management.createIndexPattern.emptyStateLabel.learnHowLink"
-                    values={Object {}}
-                  />
-                </EuiLink>,
-                "needToIndex": <EuiTextColor
-                  color="subdued"
-                  component="span"
+                  [Function]
+                </FormattedMessage>
+              </EuiLink>,
+              "needToIndex": <EuiTextColor
+                color="subdued"
+                component="span"
+              >
+                <FormattedMessage
+                  defaultMessage="You'll need to index some data into Elasticsearch before you can create an index pattern."
+                  id="kbn.management.createIndexPattern.emptyStateLabel.needToIndexLabel"
+                  values={Object {}}
                 >
-                  <FormattedMessage
-                    defaultMessage="You'll need to index some data into Elasticsearch before you can create an index pattern."
-                    id="kbn.management.createIndexPattern.emptyStateLabel.needToIndexLabel"
-                    values={Object {}}
-                  />
-                </EuiTextColor>,
-              }
+                  [Function]
+                </FormattedMessage>
+              </EuiTextColor>,
             }
-          />
-        </p>
+          }
+        />
       </EuiText>
       <EuiSpacer
         size="m"

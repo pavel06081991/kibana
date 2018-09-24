@@ -19,7 +19,9 @@ exports[`NumberFormatEditor should render normally 1`] = `
             defaultMessage="Documentation"
             id="common.ui.fieldEditor.number.documentaionLabel"
             values={Object {}}
-          />
+          >
+            [Function]
+          </FormattedMessage>
            
           <EuiIcon
             size="m"
@@ -40,7 +42,9 @@ exports[`NumberFormatEditor should render normally 1`] = `
             </EuiCode>,
           }
         }
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiFieldText

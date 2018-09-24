@@ -77,7 +77,15 @@ exports[`StaticLookupFormatEditorComponent should render multiple lookup entries
     describedByIds={Array []}
     fullWidth={false}
     hasEmptyLabelSpace={false}
-    label="Value for unknown key"
+    label={
+      <FormattedMessage
+        defaultMessage="Value for unknown key"
+        id="common.ui.fieldEditor.staticLookup.unknownKeyLabel"
+        values={Object {}}
+      >
+        [Function]
+      </FormattedMessage>
+    }
   >
     <EuiFieldText
       compressed={false}
@@ -165,7 +173,15 @@ exports[`StaticLookupFormatEditorComponent should render normally 1`] = `
     describedByIds={Array []}
     fullWidth={false}
     hasEmptyLabelSpace={false}
-    label="Value for unknown key"
+    label={
+      <FormattedMessage
+        defaultMessage="Value for unknown key"
+        id="common.ui.fieldEditor.staticLookup.unknownKeyLabel"
+        values={Object {}}
+      >
+        [Function]
+      </FormattedMessage>
+    }
   >
     <EuiFieldText
       compressed={false}

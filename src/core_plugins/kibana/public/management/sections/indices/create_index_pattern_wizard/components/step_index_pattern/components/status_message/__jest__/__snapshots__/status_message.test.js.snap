@@ -20,24 +20,22 @@ exports[`StatusMessage should render with exact matches 1`] = `
         id="kbn.management.createIndexPattern.step.status.successLabel.successDetail"
         values={
           Object {
-            "strongIndices": <strong>
-              <FormattedMessage
-                defaultMessage="{indicesLength, plural, one {# index} other {# indices}}"
-                id="kbn.management.createIndexPattern.step.status.successLabel.strongIndicesLabel"
-                values={
-                  Object {
-                    "indicesLength": 1,
-                  }
+            "strongIndices": <FormattedMessage
+              defaultMessage="{indicesLength, plural, one {# index} other {# indices}}"
+              id="kbn.management.createIndexPattern.step.status.successLabel.strongIndicesLabel"
+              tagName="strong"
+              values={
+                Object {
+                  "indicesLength": 1,
                 }
-              />
-            </strong>,
-            "strongSuccess": <strong>
-              <FormattedMessage
-                defaultMessage="Success!"
-                id="kbn.management.createIndexPattern.step.status.successLabel.strongSuccessLabel"
-                values={Object {}}
-              />
-            </strong>,
+              }
+            />,
+            "strongSuccess": <FormattedMessage
+              defaultMessage="Success!"
+              id="kbn.management.createIndexPattern.step.status.successLabel.strongSuccessLabel"
+              tagName="strong"
+              values={Object {}}
+            />,
           }
         }
       />
@@ -55,28 +53,25 @@ exports[`StatusMessage should render with no partial matches 1`] = `
     color="default"
     component="span"
   >
-    <span>
-      <FormattedMessage
-        defaultMessage="The index pattern you've entered doesn't match any indices. You can match {indicesLength, plural, one {your} other {any of your}} {strongIndices}, below."
-        id="kbn.management.createIndexPattern.step.status.notMatchLabel.notMatchDetail"
-        values={
-          Object {
-            "indicesLength": 2,
-            "strongIndices": <strong>
-              <FormattedMessage
-                defaultMessage="{indicesLength, plural, one {# index} other {# indices}}"
-                id="kbn.management.createIndexPattern.step.status.notMatchLabel.allIndicesLabel"
-                values={
-                  Object {
-                    "indicesLength": 2,
-                  }
-                }
-              />
-            </strong>,
-          }
+    <FormattedMessage
+      defaultMessage="The index pattern you've entered doesn't match any indices. You can match {indicesLength, plural, one {your} other {any of your}} {strongIndices}, below."
+      id="kbn.management.createIndexPattern.step.status.notMatchLabel.notMatchDetail"
+      values={
+        Object {
+          "indicesLength": 2,
+          "strongIndices": <FormattedMessage
+            defaultMessage="{indicesLength, plural, one {# index} other {# indices}}"
+            id="kbn.management.createIndexPattern.step.status.notMatchLabel.allIndicesLabel"
+            tagName="strong"
+            values={
+              Object {
+                "indicesLength": 2,
+              }
+            }
+          />,
         }
-      />
-    </span>
+      }
+    />
   </EuiTextColor>
 </EuiText>
 `;
@@ -90,28 +85,25 @@ exports[`StatusMessage should render with partial matches 1`] = `
     color="default"
     component="span"
   >
-    <span>
-      <FormattedMessage
-        defaultMessage="Your index pattern doesn't match any indices, but you have {strongIndices} which {matchedIndicesLength, plural, one {looks} other {look}} similar."
-        id="kbn.management.createIndexPattern.step.status.partialMatchLabel.partialMatchDetail"
-        values={
-          Object {
-            "matchedIndicesLength": 1,
-            "strongIndices": <strong>
-              <FormattedMessage
-                defaultMessage="{matchedIndicesLength, plural, one {# index} other {# indices}}"
-                id="kbn.management.createIndexPattern.step.status.partialMatchLabel.strongIndicesLabel"
-                values={
-                  Object {
-                    "matchedIndicesLength": 1,
-                  }
-                }
-              />
-            </strong>,
-          }
+    <FormattedMessage
+      defaultMessage="Your index pattern doesn't match any indices, but you have {strongIndices} which {matchedIndicesLength, plural, one {looks} other {look}} similar."
+      id="kbn.management.createIndexPattern.step.status.partialMatchLabel.partialMatchDetail"
+      values={
+        Object {
+          "matchedIndicesLength": 1,
+          "strongIndices": <FormattedMessage
+            defaultMessage="{matchedIndicesLength, plural, one {# index} other {# indices}}"
+            id="kbn.management.createIndexPattern.step.status.partialMatchLabel.strongIndicesLabel"
+            tagName="strong"
+            values={
+              Object {
+                "matchedIndicesLength": 1,
+              }
+            }
+          />,
         }
-      />
-    </span>
+      }
+    />
   </EuiTextColor>
 </EuiText>
 `;
@@ -125,20 +117,18 @@ exports[`StatusMessage should render without a query 1`] = `
     color="default"
     component="span"
   >
-    <span>
-      <FormattedMessage
-        defaultMessage="Your index pattern can match any of your {strongIndices}, below."
-        id="kbn.management.createIndexPattern.step.status.matchAnyLabel.matchAnyDetail"
-        values={
-          Object {
-            "strongIndices": <strong>
-              2
-               indices
-            </strong>,
-          }
+    <FormattedMessage
+      defaultMessage="Your index pattern can match any of your {strongIndices}, below."
+      id="kbn.management.createIndexPattern.step.status.matchAnyLabel.matchAnyDetail"
+      values={
+        Object {
+          "strongIndices": <strong>
+            2
+             indices
+          </strong>,
         }
-      />
-    </span>
+      }
+    />
   </EuiTextColor>
 </EuiText>
 `;
@@ -152,13 +142,11 @@ exports[`StatusMessage should show that no indices exist 1`] = `
     color="default"
     component="span"
   >
-    <span>
-      <FormattedMessage
-        defaultMessage="No Elasticsearch indices match your pattern."
-        id="kbn.management.createIndexPattern.step.status.noSystemIndicesLabel"
-        values={Object {}}
-      />
-    </span>
+    <FormattedMessage
+      defaultMessage="No Elasticsearch indices match your pattern."
+      id="kbn.management.createIndexPattern.step.status.noSystemIndicesLabel"
+      values={Object {}}
+    />
   </EuiTextColor>
 </EuiText>
 `;
@@ -172,13 +160,11 @@ exports[`StatusMessage should show that system indices exist 1`] = `
     color="default"
     component="span"
   >
-    <span>
-      <FormattedMessage
-        defaultMessage="No Elasticsearch indices match your pattern. To view the matching system indices, toggle the switch in the upper right."
-        id="kbn.management.createIndexPattern.step.status.noSystemIndicesWithPromptLabel"
-        values={Object {}}
-      />
-    </span>
+    <FormattedMessage
+      defaultMessage="No Elasticsearch indices match your pattern. To view the matching system indices, toggle the switch in the upper right."
+      id="kbn.management.createIndexPattern.step.status.noSystemIndicesWithPromptLabel"
+      values={Object {}}
+    />
   </EuiTextColor>
 </EuiText>
 `;

@@ -5,13 +5,12 @@ exports[`Header should mark the input as invalid 1`] = `
   <EuiTitle
     size="s"
   >
-    <h2>
-      <FormattedMessage
-        defaultMessage="Step 1 of 2: Define index pattern"
-        id="kbn.management.createIndexPattern.stepHeader"
-        values={Object {}}
-      />
-    </h2>
+    <FormattedMessage
+      defaultMessage="Step 1 of 2: Define index pattern"
+      id="kbn.management.createIndexPattern.stepHeader"
+      tagName="h2"
+      values={Object {}}
+    />
   </EuiTitle>
   <EuiSpacer
     size="m"
@@ -43,32 +42,30 @@ exports[`Header should mark the input as invalid 1`] = `
           hasEmptyLabelSpace={false}
           helpText={
             <div>
-              <p>
-                <FormattedMessage
-                  defaultMessage="You can use a {asterisk} as a wildcard in your index pattern."
-                  id="kbn.management.createIndexPattern.step.indexPattern.allowLabel"
-                  values={
-                    Object {
-                      "asterisk": <strong>
-                        *
-                      </strong>,
-                    }
+              <FormattedMessage
+                defaultMessage="You can use a {asterisk} as a wildcard in your index pattern."
+                id="kbn.management.createIndexPattern.step.indexPattern.allowLabel"
+                tagName="p"
+                values={
+                  Object {
+                    "asterisk": <strong>
+                      *
+                    </strong>,
                   }
-                />
-              </p>
-              <p>
-                <FormattedMessage
-                  defaultMessage="You can't use spaces or the characters {characterList}."
-                  id="kbn.management.createIndexPattern.step.indexPattern.disallowLabel"
-                  values={
-                    Object {
-                      "characterList": <strong>
-                        %
-                      </strong>,
-                    }
+                }
+              />
+              <FormattedMessage
+                defaultMessage="You can't use spaces or the characters {characterList}."
+                id="kbn.management.createIndexPattern.step.indexPattern.disallowLabel"
+                tagName="p"
+                values={
+                  Object {
+                    "characterList": <strong>
+                      %
+                    </strong>,
                   }
-                />
-              </p>
+                }
+              />
             </div>
           }
           isInvalid={true}
@@ -77,7 +74,9 @@ exports[`Header should mark the input as invalid 1`] = `
               defaultMessage="Index pattern"
               id="kbn.management.createIndexPattern.step.indexPatternLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           }
         >
           <EuiFieldText
@@ -124,13 +123,12 @@ exports[`Header should render normally 1`] = `
   <EuiTitle
     size="s"
   >
-    <h2>
-      <FormattedMessage
-        defaultMessage="Step 1 of 2: Define index pattern"
-        id="kbn.management.createIndexPattern.stepHeader"
-        values={Object {}}
-      />
-    </h2>
+    <FormattedMessage
+      defaultMessage="Step 1 of 2: Define index pattern"
+      id="kbn.management.createIndexPattern.stepHeader"
+      tagName="h2"
+      values={Object {}}
+    />
   </EuiTitle>
   <EuiSpacer
     size="m"
@@ -158,32 +156,30 @@ exports[`Header should render normally 1`] = `
           hasEmptyLabelSpace={false}
           helpText={
             <div>
-              <p>
-                <FormattedMessage
-                  defaultMessage="You can use a {asterisk} as a wildcard in your index pattern."
-                  id="kbn.management.createIndexPattern.step.indexPattern.allowLabel"
-                  values={
-                    Object {
-                      "asterisk": <strong>
-                        *
-                      </strong>,
-                    }
+              <FormattedMessage
+                defaultMessage="You can use a {asterisk} as a wildcard in your index pattern."
+                id="kbn.management.createIndexPattern.step.indexPattern.allowLabel"
+                tagName="p"
+                values={
+                  Object {
+                    "asterisk": <strong>
+                      *
+                    </strong>,
                   }
-                />
-              </p>
-              <p>
-                <FormattedMessage
-                  defaultMessage="You can't use spaces or the characters {characterList}."
-                  id="kbn.management.createIndexPattern.step.indexPattern.disallowLabel"
-                  values={
-                    Object {
-                      "characterList": <strong>
-                        %
-                      </strong>,
-                    }
+                }
+              />
+              <FormattedMessage
+                defaultMessage="You can't use spaces or the characters {characterList}."
+                id="kbn.management.createIndexPattern.step.indexPattern.disallowLabel"
+                tagName="p"
+                values={
+                  Object {
+                    "characterList": <strong>
+                      %
+                    </strong>,
                   }
-                />
-              </p>
+                }
+              />
             </div>
           }
           isInvalid={false}
@@ -192,7 +188,9 @@ exports[`Header should render normally 1`] = `
               defaultMessage="Index pattern"
               id="kbn.management.createIndexPattern.step.indexPatternLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           }
         >
           <EuiFieldText

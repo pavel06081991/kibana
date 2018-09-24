@@ -13,7 +13,9 @@ exports[`DurationFormatEditor should render human readable output normally 1`] =
         defaultMessage="Input format"
         id="common.ui.fieldEditor.duration.inputFormatLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiSelect
@@ -43,7 +45,9 @@ exports[`DurationFormatEditor should render human readable output normally 1`] =
         defaultMessage="Output format"
         id="common.ui.fieldEditor.duration.outputFormatLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiSelect
@@ -125,7 +129,9 @@ exports[`DurationFormatEditor should render non-human readable output normally 1
         defaultMessage="Input format"
         id="common.ui.fieldEditor.duration.inputFormatLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiSelect
@@ -155,7 +161,9 @@ exports[`DurationFormatEditor should render non-human readable output normally 1
         defaultMessage="Output format"
         id="common.ui.fieldEditor.duration.outputFormatLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiSelect
@@ -190,7 +198,9 @@ exports[`DurationFormatEditor should render non-human readable output normally 1
         defaultMessage="Decimal places"
         id="common.ui.fieldEditor.duration.decimalPlacesLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiFieldNumber

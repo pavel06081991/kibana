@@ -36,13 +36,12 @@ exports[`home directories should not render directory entry when showOnHomePage 
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -66,13 +65,12 @@ exports[`home directories should not render directory entry when showOnHomePage 
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -104,13 +102,12 @@ exports[`home directories should not render directory entry when showOnHomePage 
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -170,13 +167,12 @@ exports[`home directories should render ADMIN directory entry in "Manage" panel 
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -200,13 +196,12 @@ exports[`home directories should render ADMIN directory entry in "Manage" panel 
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -257,13 +252,12 @@ exports[`home directories should render ADMIN directory entry in "Manage" panel 
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -323,13 +317,12 @@ exports[`home directories should render DATA directory entry in "Explore Data" p
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -372,13 +365,12 @@ exports[`home directories should render DATA directory entry in "Explore Data" p
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -410,13 +402,12 @@ exports[`home directories should render DATA directory entry in "Explore Data" p
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -476,13 +467,12 @@ exports[`home isNewKibanaInstance should safely handle execeptions 1`] = `
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -506,13 +496,12 @@ exports[`home isNewKibanaInstance should safely handle execeptions 1`] = `
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -544,13 +533,12 @@ exports[`home isNewKibanaInstance should safely handle execeptions 1`] = `
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -610,13 +598,12 @@ exports[`home isNewKibanaInstance should set isNewKibanaInstance to false when t
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -640,13 +627,12 @@ exports[`home isNewKibanaInstance should set isNewKibanaInstance to false when t
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -678,13 +664,12 @@ exports[`home isNewKibanaInstance should set isNewKibanaInstance to false when t
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -744,13 +729,12 @@ exports[`home isNewKibanaInstance should set isNewKibanaInstance to true when th
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -774,13 +758,12 @@ exports[`home isNewKibanaInstance should set isNewKibanaInstance to true when th
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -812,13 +795,12 @@ exports[`home isNewKibanaInstance should set isNewKibanaInstance to true when th
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -878,13 +860,12 @@ exports[`home should not contain RecentlyAccessed panel when there is no recentl
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -908,13 +889,12 @@ exports[`home should not contain RecentlyAccessed panel when there is no recentl
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -946,13 +926,12 @@ exports[`home should not contain RecentlyAccessed panel when there is no recentl
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -1028,13 +1007,12 @@ exports[`home should render home component 1`] = `
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -1058,13 +1036,12 @@ exports[`home should render home component 1`] = `
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -1096,13 +1073,12 @@ exports[`home should render home component 1`] = `
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -1162,13 +1138,12 @@ exports[`home welcome should show the normal home page if loading fails 1`] = `
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -1192,13 +1167,12 @@ exports[`home welcome should show the normal home page if loading fails 1`] = `
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -1230,13 +1204,12 @@ exports[`home welcome should show the normal home page if loading fails 1`] = `
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -1296,13 +1269,12 @@ exports[`home welcome should show the normal home page if welcome screen is disa
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -1326,13 +1298,12 @@ exports[`home welcome should show the normal home page if welcome screen is disa
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -1364,13 +1335,12 @@ exports[`home welcome should show the normal home page if welcome screen is disa
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"
@@ -1437,13 +1407,12 @@ exports[`home welcome stores skip welcome setting if skipped 1`] = `
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Visualize and Explore Data"
-                id="kbn.home.directories.visualize.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Visualize and Explore Data"
+              id="kbn.home.directories.visualize.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -1467,13 +1436,12 @@ exports[`home welcome stores skip welcome setting if skipped 1`] = `
           <EuiTitle
             size="m"
           >
-            <h3>
-              <FormattedMessage
-                defaultMessage="Manage and Administer the Elastic Stack"
-                id="kbn.home.directories.manage.nameTitle"
-                values={Object {}}
-              />
-            </h3>
+            <FormattedMessage
+              defaultMessage="Manage and Administer the Elastic Stack"
+              id="kbn.home.directories.manage.nameTitle"
+              tagName="h3"
+              values={Object {}}
+            />
           </EuiTitle>
           <EuiSpacer
             size="m"
@@ -1505,13 +1473,12 @@ exports[`home welcome stores skip welcome setting if skipped 1`] = `
         <EuiText
           grow={true}
         >
-          <p>
-            <FormattedMessage
-              defaultMessage="Didn’t find what you were looking for?"
-              id="kbn.home.directories.notFound.description"
-              values={Object {}}
-            />
-          </p>
+          <FormattedMessage
+            defaultMessage="Didn’t find what you were looking for?"
+            id="kbn.home.directories.notFound.description"
+            tagName="p"
+            values={Object {}}
+          />
         </EuiText>
         <EuiSpacer
           size="s"

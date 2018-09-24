@@ -13,7 +13,9 @@ exports[`TruncateFormatEditor should render normally 1`] = `
         defaultMessage="Field length"
         id="common.ui.fieldEditor.truncate.lengthLabel"
         values={Object {}}
-      />
+      >
+        [Function]
+      </FormattedMessage>
     }
   >
     <EuiFieldNumber

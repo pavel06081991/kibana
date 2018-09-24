@@ -22,24 +22,22 @@ exports[`apmUiEnabled 1`] = `
       <EuiTitle
         size="m"
       >
-        <h3>
-          <FormattedMessage
-            defaultMessage="Add Data to Kibana"
-            id="kbn.home.addData.addDataToKibanaTitle"
-            values={Object {}}
-          />
-        </h3>
+        <FormattedMessage
+          defaultMessage="Add Data to Kibana"
+          id="kbn.home.addData.addDataToKibanaTitle"
+          tagName="h3"
+          values={Object {}}
+        />
       </EuiTitle>
       <EuiText
         grow={true}
       >
-        <p>
-          <FormattedMessage
-            defaultMessage="Use these solutions to quickly turn your data into pre-built dashboards and monitoring systems."
-            id="kbn.home.addData.addDataToKibanaDescription"
-            values={Object {}}
-          />
-        </p>
+        <FormattedMessage
+          defaultMessage="Use these solutions to quickly turn your data into pre-built dashboards and monitoring systems."
+          id="kbn.home.addData.addDataToKibanaDescription"
+          tagName="p"
+          values={Object {}}
+        />
       </EuiText>
     </EuiFlexItem>
   </EuiFlexGroup>
@@ -75,7 +73,9 @@ exports[`apmUiEnabled 1`] = `
               defaultMessage="Add APM"
               id="kbn.home.addData.apm.addApmButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -111,7 +111,9 @@ exports[`apmUiEnabled 1`] = `
               defaultMessage="Add log data"
               id="kbn.home.addData.logging.addLogDataButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -147,7 +149,9 @@ exports[`apmUiEnabled 1`] = `
               defaultMessage="Add metric data"
               id="kbn.home.addData.metrics.addMetricsDataButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -183,7 +187,9 @@ exports[`apmUiEnabled 1`] = `
               defaultMessage="Add security events"
               id="kbn.home.addData.security.addSecurityEventsButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -221,19 +227,11 @@ exports[`apmUiEnabled 1`] = `
       <EuiText
         grow={true}
       >
-        <strong
-          style={
-            Object {
-              "height": 38,
-            }
-          }
-        >
-          <FormattedMessage
-            defaultMessage="Sample Data"
-            id="kbn.home.addData.sampleDataTitle"
-            values={Object {}}
-          />
-        </strong>
+        <FormattedMessage
+          defaultMessage="Sample Data"
+          id="kbn.home.addData.sampleDataTitle"
+          values={Object {}}
+        />
         <EuiLink
           color="primary"
           href="#/home/tutorial_directory/sampleData"
@@ -260,19 +258,11 @@ exports[`apmUiEnabled 1`] = `
       <EuiText
         grow={true}
       >
-        <strong
-          style={
-            Object {
-              "height": 38,
-            }
-          }
-        >
-          <FormattedMessage
-            defaultMessage="Your Data"
-            id="kbn.home.addData.yourDataTitle"
-            values={Object {}}
-          />
-        </strong>
+        <FormattedMessage
+          defaultMessage="Your Data"
+          id="kbn.home.addData.yourDataTitle"
+          values={Object {}}
+        />
         <EuiLink
           color="primary"
           href="#/management/kibana/index"
@@ -317,24 +307,22 @@ exports[`isNewKibanaInstance 1`] = `
       <EuiTitle
         size="m"
       >
-        <h3>
-          <FormattedMessage
-            defaultMessage="Add Data to Kibana"
-            id="kbn.home.addData.addDataToKibanaTitle"
-            values={Object {}}
-          />
-        </h3>
+        <FormattedMessage
+          defaultMessage="Add Data to Kibana"
+          id="kbn.home.addData.addDataToKibanaTitle"
+          tagName="h3"
+          values={Object {}}
+        />
       </EuiTitle>
       <EuiText
         grow={true}
       >
-        <p>
-          <FormattedMessage
-            defaultMessage="Use these solutions to quickly turn your data into pre-built dashboards and monitoring systems."
-            id="kbn.home.addData.addDataToKibanaDescription"
-            values={Object {}}
-          />
-        </p>
+        <FormattedMessage
+          defaultMessage="Use these solutions to quickly turn your data into pre-built dashboards and monitoring systems."
+          id="kbn.home.addData.addDataToKibanaDescription"
+          tagName="p"
+          values={Object {}}
+        />
       </EuiText>
     </EuiFlexItem>
   </EuiFlexGroup>
@@ -370,7 +358,9 @@ exports[`isNewKibanaInstance 1`] = `
               defaultMessage="Add log data"
               id="kbn.home.addData.logging.addLogDataButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -406,7 +396,9 @@ exports[`isNewKibanaInstance 1`] = `
               defaultMessage="Add metric data"
               id="kbn.home.addData.metrics.addMetricsDataButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -442,7 +434,9 @@ exports[`isNewKibanaInstance 1`] = `
               defaultMessage="Add security events"
               id="kbn.home.addData.security.addSecurityEventsButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -480,19 +474,11 @@ exports[`isNewKibanaInstance 1`] = `
       <EuiText
         grow={true}
       >
-        <strong
-          style={
-            Object {
-              "height": 38,
-            }
-          }
-        >
-          <FormattedMessage
-            defaultMessage="Sample Data"
-            id="kbn.home.addData.sampleDataTitle"
-            values={Object {}}
-          />
-        </strong>
+        <FormattedMessage
+          defaultMessage="Sample Data"
+          id="kbn.home.addData.sampleDataTitle"
+          values={Object {}}
+        />
         <EuiLink
           color="primary"
           href="#/home/tutorial_directory/sampleData"
@@ -519,19 +505,11 @@ exports[`isNewKibanaInstance 1`] = `
       <EuiText
         grow={true}
       >
-        <strong
-          style={
-            Object {
-              "height": 38,
-            }
-          }
-        >
-          <FormattedMessage
-            defaultMessage="Your Data"
-            id="kbn.home.addData.yourDataTitle"
-            values={Object {}}
-          />
-        </strong>
+        <FormattedMessage
+          defaultMessage="Your Data"
+          id="kbn.home.addData.yourDataTitle"
+          values={Object {}}
+        />
         <EuiLink
           color="primary"
           href="#/management/kibana/index"
@@ -576,24 +554,22 @@ exports[`render 1`] = `
       <EuiTitle
         size="m"
       >
-        <h3>
-          <FormattedMessage
-            defaultMessage="Add Data to Kibana"
-            id="kbn.home.addData.addDataToKibanaTitle"
-            values={Object {}}
-          />
-        </h3>
+        <FormattedMessage
+          defaultMessage="Add Data to Kibana"
+          id="kbn.home.addData.addDataToKibanaTitle"
+          tagName="h3"
+          values={Object {}}
+        />
       </EuiTitle>
       <EuiText
         grow={true}
       >
-        <p>
-          <FormattedMessage
-            defaultMessage="Use these solutions to quickly turn your data into pre-built dashboards and monitoring systems."
-            id="kbn.home.addData.addDataToKibanaDescription"
-            values={Object {}}
-          />
-        </p>
+        <FormattedMessage
+          defaultMessage="Use these solutions to quickly turn your data into pre-built dashboards and monitoring systems."
+          id="kbn.home.addData.addDataToKibanaDescription"
+          tagName="p"
+          values={Object {}}
+        />
       </EuiText>
     </EuiFlexItem>
   </EuiFlexGroup>
@@ -629,7 +605,9 @@ exports[`render 1`] = `
               defaultMessage="Add log data"
               id="kbn.home.addData.logging.addLogDataButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -665,7 +643,9 @@ exports[`render 1`] = `
               defaultMessage="Add metric data"
               id="kbn.home.addData.metrics.addMetricsDataButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -701,7 +681,9 @@ exports[`render 1`] = `
               defaultMessage="Add security events"
               id="kbn.home.addData.security.addSecurityEventsButtonLabel"
               values={Object {}}
-            />
+            >
+              [Function]
+            </FormattedMessage>
           </EuiButton>
         }
         icon={
@@ -739,19 +721,11 @@ exports[`render 1`] = `
       <EuiText
         grow={true}
       >
-        <strong
-          style={
-            Object {
-              "height": 38,
-            }
-          }
-        >
-          <FormattedMessage
-            defaultMessage="Sample Data"
-            id="kbn.home.addData.sampleDataTitle"
-            values={Object {}}
-          />
-        </strong>
+        <FormattedMessage
+          defaultMessage="Sample Data"
+          id="kbn.home.addData.sampleDataTitle"
+          values={Object {}}
+        />
         <EuiLink
           color="primary"
           href="#/home/tutorial_directory/sampleData"
@@ -778,19 +752,11 @@ exports[`render 1`] = `
       <EuiText
         grow={true}
       >
-        <strong
-          style={
-            Object {
-              "height": 38,
-            }
-          }
-        >
-          <FormattedMessage
-            defaultMessage="Your Data"
-            id="kbn.home.addData.yourDataTitle"
-            values={Object {}}
-          />
-        </strong>
+        <FormattedMessage
+          defaultMessage="Your Data"
+          id="kbn.home.addData.yourDataTitle"
+          values={Object {}}
+        />
         <EuiLink
           color="primary"
           href="#/management/kibana/index"
