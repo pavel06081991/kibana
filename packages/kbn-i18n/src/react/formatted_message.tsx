@@ -17,17 +17,21 @@
  * under the License.
  */
 
-export {
-  intlShape,
-  FormattedDate,
-  FormattedTime,
-  FormattedRelative,
-  FormattedNumber,
-  FormattedPlural,
-  FormattedMessage,
-  FormattedHTMLMessage,
-} from 'react-intl';
+import { createElement, Fragment } from 'react';
+import { FormattedMessage } from 'react-intl';
 
-export { I18nProvider } from './provider';
-export { injectI18n } from './inject';
-export { KbnFormattedMessage } from './formatted_message';
+export function KbnFormattedMessage({ noTag, ...rest }) {
+  if (noTag) {
+    return (
+      <FormattedMessage {...rest}>
+        {(...text) => createElement(Fragment, null, ...text)}
+      </FormattedMessage>
+    );
+  }
+
+  return <FormattedMessage {...rest} />;
+}
+
+KbnFormattedMessage.defaultProps = {
+  noTag: false,
+};
