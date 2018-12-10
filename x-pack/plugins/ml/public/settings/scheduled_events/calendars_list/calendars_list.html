@@ -22,12 +22,15 @@
               >
                 <button class="kuiButton kuiButton--primary"
                   ng-click="newCalendarClick()"
-                  aria-label="Create new calendar"
+                  aria-label="{{ ::'xpack.ml.settings.calendarsList.createCalendarAriaLabel' | i18n: {defaultMessage: 'Create new calendar'} }}"
                   tooltip="Create new calendar"
                   ng-disabled='buttonChecks.newButtonDisabled()'
                   tooltip-append-to-body="true">
                   <span aria-hidden="true" class="kuiButton__icon kuiIcon fa-plus"></span>
-                  New calendar
+                  <span
+                    i18n-id="xpack.ml.settings.calendarsList.createCalendarButtonLabel"
+                    i18n-default-message="New calendar"
+                  ></span>
                 </button>
               </div>
             </div>
@@ -52,17 +55,26 @@
               <tr>
                 <th scope="col" class="kuiTableHeaderCell">
                   <sortable-column field="{{SORT_FIELD_LABELS.CALENDAR_ID}}" on-sort-change="onSortChange" sort-field="sortField" sort-reverse="sortReverse">
-                    ID
+                    <span
+                      i18n-id="xpack.ml.settings.calendarsList.idColumnName"
+                      i18n-default-message="ID"
+                    ></span>
                   </sortable-column>
                 </th>
                 <th scope="col" class="kuiTableHeaderCell">
                   <sortable-column field="{{SORT_FIELD_LABELS.JOB_IDS}}" on-sort-change="onSortChange" sort-field="sortField" sort-reverse="sortReverse">
-                    Jobs
+                    <span
+                      i18n-id="xpack.ml.settings.calendarsList.jobsColumnName"
+                      i18n-default-message="Jobs"
+                    ></span>
                   </sortable-column>
                 </th>
                 <th scope="col" class="kuiTableHeaderCell">
                   <sortable-column field="{{SORT_FIELD_LABELS.EVENT_COUNT}}" on-sort-change="onSortChange" sort-field="sortField" sort-reverse="sortReverse">
-                    Events
+                    <span
+                      i18n-id="xpack.ml.settings.calendarsList.eventsColumnName"
+                      i18n-default-message="Events"
+                    ></span>
                   </sortable-column>
                 </th>
                 <th scope="col" class="kuiTableHeaderCell actions-col"></th>
@@ -89,9 +101,11 @@
                 </td>
                 <td class="kuiTableRowCell">
                   <div class="kuiTableRowCell__liner">
-                    <span>
-                       {{calendar.events.length}} {{calendar.events.length === 1 ? 'event' : 'events'}}
-                    </span>
+                    <span
+                      i18n-id="xpack.ml.settings.calendarsList.calendarEventsText"
+                      i18n-default-message="{calendarEventsLength, plural, one {# event} other {# events}}"
+                      i18n-values="{ calendarEventsLength: calendar.events.length }"
+                    ></span>
                   </div>
                 </td>
                 <td class="kuiTableRowCell">
@@ -102,11 +116,19 @@
                         ng-attr-tooltip="{{buttonChecks.newButtonWrapperTooltip()}}">
                         <button
                           class="kuiMenuButton kuiMenuButton--basic kuiMenuButton--iconText"
-                          aria-label="Edit {{calendar.calendar_id}}"
+                          aria-label="{{ ::'xpack.ml.settings.calendarsList.editCalendarAriaLabel' | i18n: {
+                            defaultMessage: 'Edit {calendarId}',
+                            values: {
+                              calendarId: calendar.calendar_id,
+                            }
+                          } }}"
                           ng-disabled='buttonChecks.newButtonDisabled()'
                           ng-click="editCalendarClick(calendar.calendar_id)">
                           <span class="kuiMenuButton__icon kuiIcon fa-pencil"></span>
-                          <span>Edit</span>
+                          <span
+                            i18n-id="xpack.ml.settings.calendarsList.editCalendarButtonLabel"
+                            i18n-default-message="Edit"
+                          ></span>
                         </button>
                       </div>
                       <div
@@ -114,12 +136,20 @@
                         ng-attr-tooltip="{{buttonChecks.deleteButtonWrapperTooltip()}}">
                         <button
                           class="kuiMenuButton kuiMenuButton--danger kuiMenuButton--iconText"
-                          aria-label="Delete {{calendar.calendar_id}}"
+                          aria-label="{{ ::'xpack.ml.settings.calendarsList.deleteCalendarAriaLabel' | i18n: {
+                            defaultMessage: 'Delete {calendarId}',
+                            values: {
+                              calendarId: calendar.calendar_id,
+                            }
+                          } }}"
                           ng-disabled='buttonChecks.deleteButtonDisabled()'
                           ng-click="deleteCalendarClick(calendar.calendar_id)"
                           href="" >
                           <span class="kuiMenuButton__icon kuiIcon fa-trash"></span>
-                          <span>Delete</span>
+                          <span
+                            i18n-id="xpack.ml.settings.calendarsList.deleteCalendarButtonLabel"
+                            i18n-default-message="Delete"
+                          ></span>
                         </button>
                       </div>
                     </div>

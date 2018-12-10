@@ -45,7 +45,8 @@ module.controller('MlCalendarsList',
     $route,
     $location,
     pagerFactory,
-    mlConfirmModalService) {
+    mlConfirmModalService,
+    i18n) {
 
     $scope.permissions = {
       canCreateCalendar: checkPermission('canCreateCalendar'),
@@ -114,8 +115,15 @@ module.controller('MlCalendarsList',
 
     $scope.deleteCalendarClick = function (calendarId) {
       mlConfirm.open({
-        message: `Confirm deletion of ${calendarId}?`,
-        title: `Delete calendar`
+        message: i18n.translate('xpack.ml.settings.calendarsList.confirmDeletionOfCalendarDescription', {
+          defaultMessage: 'Confirm deletion of {calendarId}?',
+          values: {
+            calendarId,
+          },
+        }),
+        title: i18n.translate('xpack.ml.settings.calendarsList.confirmDeletionOfCalendarTitle', {
+          defaultMessage: 'Delete calendar',
+        }),
       })
         .then(() => {
           ml.deleteCalendar({ calendarId })

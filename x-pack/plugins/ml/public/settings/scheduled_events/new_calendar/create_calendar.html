@@ -11,16 +11,18 @@
               <button
                 class="kuiButton kuiButton--primary"
                 ng-disabled="saveEnabled() === false"
-                ng-click="save()" >
-                Save
-              </button>
+                ng-click="save()"
+                i18n-id="xpack.ml.settings.newCalendar.saveButtonLabel"
+                i18n-default-message="Save"
+              ></button>
               <button
                 class="kuiButton kuiButton--basic"
                 ng-click="cancel()"
                 ng-disabled="saveLock === true"
-                data-test-subj="btnCancel">
-                Cancel
-              </button>
+                data-test-subj="btnCancel"
+                i18n-id="xpack.ml.settings.newCalendar.cancelButtonLabel"
+                i18n-default-message="Cancel"
+              ></button>
             </div>
           </div>
         </div>
@@ -28,9 +30,12 @@
 
       <div class="kuiViewContentItem kuiVerticalRhythm">
         <div class="kuiFormSection" aria-hidden="false">
-          <label for="id" class="kuiFormLabel">
-            Calendar ID
-          </label>
+          <label
+            for="id"
+            class="kuiFormLabel"
+            i18n-id="xpack.ml.settings.newCalendar.calendarIDLabel"
+            i18n-default-message="Calendar ID"
+          ></label>
           <input
             type="text"
             ng-disabled="isNewCalendar===false"
@@ -46,9 +51,12 @@
             </div>
           </div>
           <div class="kuiFormSection" aria-hidden="false">
-            <label for="description" class="kuiFormLabel">
-              Description
-            </label>
+            <label
+              for="description"
+              class="kuiFormLabel"
+              i18n-id="xpack.ml.settings.newCalendar.descriptionLabel"
+              i18n-default-message="Description"
+            ></label>
             <input
             type="text"
             ng-disabled="isNewCalendar===false"
@@ -58,9 +66,11 @@
             class="kuiTextInput fullWidth" />
         </div>
         <div class="kuiFormSection">
-          <label class="kuiFormLabel">
-            Jobs
-          </label>
+          <label
+            class="kuiFormLabel"
+            i18n-id="xpack.ml.settings.newCalendar.jobsLabel"
+            i18n-default-message="Jobs"
+          ></label>
           <ml-item-select
             item-ids='jobIds'
             all-items='allJobs'
@@ -70,9 +80,11 @@
           </ml-item-select>
         </div>
         <div class="kuiFormSection">
-          <label class="kuiFormLabel">
-            Groups
-          </label>
+          <label
+            class="kuiFormLabel"
+            i18n-id="xpack.ml.settings.newCalendar.groupsLabel"
+            i18n-default-message="Groups"
+          ></label>
           <ml-item-select
             item-ids='groupIds'
             all-items='allGroups'
@@ -86,9 +98,11 @@
 
       </div>
       <div class="kuiViewContentItem kuiVerticalRhythm">
-        <label class="kuiFormLabel">
-          Events
-        </label>
+        <label
+          class="kuiFormLabel"
+          i18n-id="xpack.ml.settings.newCalendar.EventsLabel"
+          i18n-default-message="Events"
+        ></label>
         <ml-events-list
           events='events'
           show-controls='true'

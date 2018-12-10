@@ -6,9 +6,11 @@
     <div class="kuiPanel mgtPanel">
       <div class="kuiPanelHeader">
         <div class="kuiPanelHeaderSection">
-          <div class="kuiPanelHeader__title ng-binding">
-            Job Management
-          </div>
+          <div
+            class="kuiPanelHeader__title ng-binding"
+            i18n-id="xpack.ml.settings.jobManagementTitle"
+            i18n-default-message="Job Management"
+          ></div>
         </div>
       </div>
 
@@ -23,9 +25,10 @@
                 tooltip-placement="bottom"
                 tooltip-popup-delay="400"
                 tooltip-append-to-body="1"
-                href="ml#/settings/calendars_list">
-                 Calendar management
-              </a>
+                href="ml#/settings/calendars_list"
+                i18n-id="xpack.ml.settings.calendarManagementLinkText"
+                i18n-default-message="Calendar management"
+              ></a>
             </li>
             <li class="col-xs-4 col-md-3 ng-scope">
               <a
@@ -36,19 +39,20 @@
                 tooltip-placement="bottom"
                 tooltip-popup-delay="400"
                 tooltip-append-to-body="1"
-                href="ml#/settings/filter_lists">
-                 Filter Lists
-              </a>
+                href="ml#/settings/filter_lists"
+                i18n-id="xpack.ml.settings.filterListsLinkText"
+                i18n-default-message="Filter Lists"
+              ></a>
               <span
                 ng-if="(canCreateFilter === false)"
                 class="mgtPanel__link disabled  ng-binding"
-                tooltip="You do not have permission to manage filter lists"
+                tooltip="{{ ::'xpack.ml.settings.noPermissionToManageFiltersDescription' | i18n: {defaultMessage: 'You do not have permission to manage filter lists'} }}"
                 tooltip-placement="bottom"
                 tooltip-popup-delay="400"
                 tooltip-append-to-body="1"
-              >
-                Filter Lists
-              </span>
+                i18n-id="xpack.ml.settings.filterListsText"
+                i18n-default-message="Filter Lists"
+              ></span>
             </li>
           </ul>
         </div>

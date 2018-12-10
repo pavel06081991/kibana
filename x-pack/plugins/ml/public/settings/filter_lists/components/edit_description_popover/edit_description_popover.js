@@ -22,8 +22,10 @@ import {
   EuiFieldText,
 } from '@elastic/eui';
 
+import { injectI18n } from '@kbn/i18n/react';
 
-export class EditDescriptionPopover extends Component {
+
+class EditDescriptionPopoverUi extends Component {
   constructor(props) {
     super(props);
 
@@ -60,7 +62,7 @@ export class EditDescriptionPopover extends Component {
   }
 
   render() {
-    const { isPopoverOpen, value } = this.state;
+    const { isPopoverOpen, value, intl } = this.state;
 
     const button = (
       <EuiButtonIcon
@@ -68,7 +70,10 @@ export class EditDescriptionPopover extends Component {
         color="primary"
         onClick={this.onButtonClick}
         iconType="pencil"
-        aria-label="Edit description"
+        aria-label={intl.formatMessage({
+          id: 'xpack.ml.settings.editDescriptionPopover.editDescriptionAriaLabel',
+          defaultMessage: 'Edit description',
+        })}
       />
     );
 
@@ -84,7 +89,10 @@ export class EditDescriptionPopover extends Component {
           <div style={{ width: '300px' }}>
             <EuiForm>
               <EuiFormRow
-                label="Filter list description"
+                label={intl.formatMessage({
+                  id: 'xpack.ml.settings.editDescriptionPopover.filterListDescriptionAriaLabel',
+                  defaultMessage: 'Filter list description',
+                })}
               >
                 <EuiFieldText
                   name="filter_list_description"
@@ -99,7 +107,9 @@ export class EditDescriptionPopover extends Component {
     );
   }
 }
-EditDescriptionPopover.propTypes = {
+EditDescriptionPopoverUi.propTypes = {
   description: PropTypes.string,
   updateDescription: PropTypes.func.isRequired
 };
+
+export const EditDescriptionPopover = injectI18n(EditDescriptionPopoverUi);

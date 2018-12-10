@@ -18,7 +18,8 @@ const module = uiModules.get('apps/ml');
 module.controller('MlImportEventsModal', function (
   $scope,
   $timeout,
-  $modalInstance) {
+  $modalInstance,
+  i18n) {
 
   $scope.loadingLock = false;
   $scope.allNewEvents = [];
@@ -27,7 +28,9 @@ module.controller('MlImportEventsModal', function (
   $scope.file = undefined;
   $scope.includePastEvents = false;
   $scope.showRecurringWarning = false;
-  $scope.RECURRING_WARNING = 'Recurring events not supported. Only the first event will be imported.';
+  $scope.RECURRING_WARNING = i18n.translate('xpack.ml.settings.importEventsModal.recurringEventsNotSupportedWarningMessage', {
+    defaultMessage: 'Recurring events not supported. Only the first event will be imported.',
+  });
 
   $timeout(() => {
     $('.modal-dialog').width(750);
@@ -50,7 +53,9 @@ module.controller('MlImportEventsModal', function (
                 $scope.loadingLock = false;
               } catch (error) {
                 $scope.error = true;
-                $scope.errorMessage = 'Could not parse ICS file';
+                $scope.errorMessage = i18n.translate('xpack.ml.settings.importEventsModal.couldnotParseICSFileErrorMessage', {
+                  defaultMessage: 'Could not parse ICS file',
+                });
               }
             })
             .catch((error) => {

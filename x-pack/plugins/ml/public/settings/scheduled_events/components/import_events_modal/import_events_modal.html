@@ -1,11 +1,16 @@
 <div class="import-events-modal">
   <ml-message-bar ></ml-message-bar>
-  <h3 class="euiTitle">Import events</h3>
+  <h3
+    class="euiTitle"
+    i18n-id="xpack.ml.settings.importEventsModal.importEventsTitle"
+    i18n-default-message="Import events"
+  ></h3>
   <div class="euiSpacer euiSpacer--s"></div>
 
-  <div>
-    Import events from an ICS file
-  </div>
+  <div
+    i18n-id="xpack.ml.settings.importEventsModal.importEventsFromICSFileDescription"
+    i18n-default-message="Import events from an ICS file"
+  ></div>
   <div class="euiSpacer euiSpacer--m"></div>
 
   <div class="import-events-container">
@@ -21,7 +26,12 @@
     <div
       ng-if="fileLoaded===true && newEvents.length >= 0"
       class="kuiFormSection">
-      <span class="kuiFormLabel">Events to import: {{newEvents.length}}</span>
+      <span
+        class="kuiFormLabel"
+        i18n-id="xpack.ml.settings.importEventsModal.eventsToImportDescription"
+        i18n-default-message="Events to import: {newEventsLength}"
+        i18n-values="{ newEventsLength: newEvents.length }"
+      ></span>
     </div>
 
     <div
@@ -36,7 +46,7 @@
       ng-if="loadingLock === true"
       class="kuiFormSection">
       <ml-loading-indicator
-        label="Importing events"
+        label="{{ ::'xpack.ml.settings.importEventsModal.importingEventsLabel' | i18n: {defaultMessage: 'Importing events'} }}"
         is-loading="true"
         height="50"
       />
@@ -64,7 +74,11 @@
             type="checkbox"
             class='kuiCheckBox'
             ng-click="createEventsList()"/>
-          <span class='kuiCheckBoxLabel__text'>Include past events</span>
+          <span
+            class='kuiCheckBoxLabel__text'
+            i18n-id="xpack.ml.settings.importEventsModal.includePastEventsDescription"
+            i18n-default-message="Include past events"
+          ></span>
         </label>
       </div>
     </div>
@@ -77,15 +91,17 @@
   <button
     ng-click="save()"
     ng-disabled="loadingLock === true"
-    class="kuiButton kuiButton--primary" >
-    Import
-  </button>
+    class="kuiButton kuiButton--primary"
+    i18n-id="xpack.ml.settings.importEventsModal.importButtonLabel"
+    i18n-default-message="Import"
+  ></button>
   <button
     ng-click="cancel()"
     ng-disabled="loadingLock === true"
     class="kuiButton kuiButton--primary"
-    aria-label="Cancel">
-    Cancel
-  </button>
+    aria-label="Cancel"
+    i18n-id="xpack.ml.settings.importEventsModal.cancelButtonLabel"
+    i18n-default-message="Cancel"
+  ></button>
 
 </div>

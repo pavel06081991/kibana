@@ -7,9 +7,12 @@
 
 
 import { createPermissionFailureMessage } from 'plugins/ml/privilege/check_privilege';
+import { i18n } from '@kbn/i18n';
 
 export function buttonsEnabledChecks(permissions, mlNodesAvailable) {
-  const NO_ML_NODES_ERROR = 'No ML nodes available';
+  const NO_ML_NODES_ERROR = i18n.translate('xpack.ml.settings.calendarsList.noMLNodesErrorMessage', {
+    defaultMessage: 'No ML nodes available',
+  });
 
   function newButtonWrapperClass() {
     return (permissions.canCreateCalendar && mlNodesAvailable) ? 'button-wrapper' : ['button-wrapper', 'disabled'];

@@ -53,14 +53,22 @@ module.controller('MlCreateCalendar',
   function (
     $scope,
     $route,
-    $location) {
+    $location,
+    i18n) {
     const msgs = mlMessageBarService;
     msgs.clear();
 
     const calendarId = $route.current.params.calendarId;
     $scope.isNewCalendar = (calendarId === undefined);
 
-    $scope.pageTitle = $scope.isNewCalendar ? 'Create new calendar' : `Edit calendar ${calendarId}`;
+    $scope.pageTitle = $scope.isNewCalendar ? i18n.translate('xpack.ml.settings.newCalendar.createNewCalendarTitle', {
+      defaultMessage: 'Create new calendar',
+    }) : i18n.translate('xpack.ml.settings.newCalendar.editCalendarTitle', {
+      defaultMessage: 'Edit calendar {calendarId}',
+      values: {
+        calendarId,
+      },
+    });
 
     $scope.calendarId = calendarId || '';
     $scope.description = '';

@@ -8,25 +8,31 @@
         <button
           class="kuiButton kuiButton--primary"
           href=""
-          aria-label="Create new event"
-          tooltip="Create new event"
+          aria-label="{{ ::'xpack.ml.settings.eventsList.createEventAriaLabel' | i18n: {defaultMessage: 'Create new event'} }}"
+          tooltip="{{ ::'xpack.ml.settings.eventsList.createEventTooltip' | i18n: {defaultMessage: 'Create new event'} }}"
           tooltip-append-to-body="true"
           ng-disabled="lockControls === true"
           ng-click="clickNewEvent()">
           <span aria-hidden="true" class="kuiButton__icon kuiIcon fa-plus"></span>
-          New event
+          <span
+            i18n-id="xpack.ml.settings.eventsList.createEventButtonLabel"
+            i18n-default-message="New event"
+          ></span>
         </button>
 
         <button
           class="kuiButton kuiButton--primary"
           href=""
-          aria-label="Import events"
-          tooltip="Import events"
+          aria-label="{{ ::'xpack.ml.settings.eventsList.importEventsAriaLabel' | i18n: {defaultMessage: 'Import events'} }}"
+          tooltip="{{ ::'xpack.ml.settings.eventsList.importEventsTooltip' | i18n: {defaultMessage: 'Import events'} }}"
           tooltip-append-to-body="true"
           ng-disabled="lockControls === true"
           ng-click="clickImportEvents()">
           <span aria-hidden="true" class="kuiButton__icon kuiIcon fa-upload"></span>
-          Import events
+          <span
+            i18n-id="xpack.ml.settings.eventsList.importEventsButtonLabel"
+            i18n-default-message="Import events"
+          ></span>
         </button>
       </div>
 
@@ -50,17 +56,26 @@
         <tr>
           <th scope="col" class="kuiTableHeaderCell">
             <sortable-column field="description" on-sort-change="onSortChange" sort-field="sortField" sort-reverse="sortReverse">
-              Description
+              <span
+                i18n-id="xpack.ml.settings.eventsList.descriptionColumnLabel"
+                i18n-default-message="Description"
+              ></span>
             </sortable-column>
           </th>
           <th scope="col" class="kuiTableHeaderCell">
             <sortable-column field="start_time" on-sort-change="onSortChange" sort-field="sortField" sort-reverse="sortReverse">
-              Start
+              <span
+                i18n-id="xpack.ml.settings.eventsList.startColumnLabel"
+                i18n-default-message="Start"
+              ></span>
             </sortable-column>
           </th>
           <th scope="col" class="kuiTableHeaderCell">
             <sortable-column field="end_time" on-sort-change="onSortChange" sort-field="sortField" sort-reverse="sortReverse">
-              End
+              <span
+                i18n-id="xpack.ml.settings.eventsList.endColumnLabel"
+                i18n-default-message="End"
+              ></span>
             </sortable-column>
           </th>
           <th scope="col" class="kuiTableHeaderCell actions-col"></th>
@@ -102,12 +117,20 @@
               <div class="kuiMenuButtonGroup kuiMenuButtonGroup--alignRight">
                 <button
                   class="kuiMenuButton kuiMenuButton--danger kuiMenuButton--iconText"
-                  aria-label="Delete {{event.description}}"
+                  aria-label="{{ ::'xpack.ml.settings.eventsList.deleteEventButtonLabel' | i18n: {
+                    defaultMessage: 'Delete {eventDescription}',
+                    values: {
+                      eventDescription: event.description,
+                    }
+                  } }}"
                   ng-disabled="lockControls === true"
                   ng-click="deleteEvent(event)"
                   href="">
                   <span class="kuiMenuButton__icon kuiIcon fa-trash"></span>
-                  <span>Delete</span>
+                  <span
+                    i18n-id="xpack.ml.settings.eventsList.deleteEventButtonLabel"
+                    i18n-default-message="Delete"
+                  ></span>
                 </button>
               </div>
             </div>
@@ -119,7 +142,11 @@
       <tfoot>
         <tr>
           <td colspan="4" class="kuiTableHeaderCell footer-cell">
-          Times are displayed in {{dateFormatTz === 'Browser' ? 'the browser' : dateFormatTz}} timezone
+            <span
+              i18n-id="xpack.ml.settings.eventsList.deleteEventButtonLabel"
+              i18n-default-message="Times are displayed in {{dateFormatTz === 'Browser' ? 'the browser' : dateFormatTz}} timezone"
+              i18n-values="{ dateFormatTz: calendar.events.length }"
+            ></span>
         </td>
         </tr>
       </tfoot>

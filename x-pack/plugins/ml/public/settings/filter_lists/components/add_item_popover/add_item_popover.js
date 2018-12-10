@@ -13,6 +13,7 @@ import PropTypes from 'prop-types';
 import React, {
   Component,
 } from 'react';
+import { FormattedMessage, injectI18n } from '@kbn/i18n/react';
 
 import {
   EuiButton,
@@ -27,7 +28,7 @@ import {
 } from '@elastic/eui';
 
 
-export class AddItemPopover extends Component {
+class AddItemPopoverUi extends Component {
   constructor(props) {
     super(props);
 
@@ -73,6 +74,8 @@ export class AddItemPopover extends Component {
   }
 
   render() {
+    const { intl } = this.props;
+
     const button = (
       <EuiButton
         size="s"
@@ -81,7 +84,10 @@ export class AddItemPopover extends Component {
         iconSide="right"
         onClick={this.onButtonClick}
       >
-        Add item
+        <FormattedMessage
+          id="xpack.ml.settings.addItemPopover.addItemButtonLabel"
+          defaultMessage="Add item"
+        />
       </EuiButton>
     );
 
@@ -97,7 +103,10 @@ export class AddItemPopover extends Component {
         >
           <EuiForm>
             <EuiFormRow
-              label="Items"
+              label={intl.formatMessage({
+                id: 'xpack.ml.settings.addItemPopover.itemsLabel',
+                defaultMessage: 'Items' }
+              )}
             >
               <EuiTextArea
                 value={this.state.itemsText}
@@ -106,7 +115,10 @@ export class AddItemPopover extends Component {
             </EuiFormRow>
           </EuiForm>
           <EuiText size="xs">
-            Enter one item per line
+            <FormattedMessage
+              id="xpack.ml.settings.addItemPopover.enterItemPerLineDescription"
+              defaultMessage="Enter one item per line"
+            />
           </EuiText>
           <EuiSpacer size="s"/>
           <EuiFlexGroup justifyContent="flexEnd">
@@ -115,7 +127,10 @@ export class AddItemPopover extends Component {
                 onClick={this.onAddButtonClick}
                 disabled={(this.state.itemsText.length === 0)}
               >
-                Add
+                <FormattedMessage
+                  id="xpack.ml.settings.addItemPopover.addButtonLabel"
+                  defaultMessage="Add"
+                />
               </EuiButton>
             </EuiFlexItem>
           </EuiFlexGroup>
@@ -124,7 +139,8 @@ export class AddItemPopover extends Component {
     );
   }
 }
-AddItemPopover.propTypes = {
+AddItemPopoverUi.propTypes = {
   addItems: PropTypes.func.isRequired
 };
 
+export const AddItemPopover = injectI18n(AddItemPopoverUi);

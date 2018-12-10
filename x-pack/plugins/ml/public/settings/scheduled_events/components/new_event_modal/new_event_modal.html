@@ -1,14 +1,21 @@
 <div class="new-event-modal">
   <ml-message-bar ></ml-message-bar>
-  <h3 class="euiTitle">Create new event</h3>
+  <h3
+    class="euiTitle"
+    i18n-id="xpack.ml.settings.newEventModal.createEventTitle"
+    i18n-default-message="Create new event"
+  ></h3>
   <div class="euiSpacer euiSpacer--s"></div>
 
   <div class="ml-new-event-contents" >
 
     <div class="kuiFormSection" aria-hidden="false">
-      <label for="id" class="kuiFormLabel">
-        Description
-      </label>
+      <label
+        for="id"
+        class="kuiFormLabel"
+        i18n-id="xpack.ml.settings.newEventModal.descriptionLabel"
+        i18n-default-message="Description"
+      ></label>
       <input
         type="text"
         ng-disabled="isNewCalendar===false"
@@ -23,9 +30,30 @@
     <div class="main-container row1">
       <div class="tabs-container">
         <ul class="nav nav-pills nav-stacked">
-          <li ng-class="{ active: ui.rangeType === '0' }"><a href="#" ng-click="ui.setRangeType('0', $event)"> Single day</a></li>
-          <li ng-class="{ active: ui.rangeType === '1' }"><a href="#" ng-click="ui.setRangeType('1', $event)"> Day range</a></li>
-          <li ng-class="{ active: ui.rangeType === '2' }"><a href="#" ng-click="ui.setRangeType('2', $event)"> Time range</a></li>
+          <li ng-class="{ active: ui.rangeType === '0' }">
+            <a
+              href="#"
+              ng-click="ui.setRangeType('0', $event)"
+              i18n-id="xpack.ml.settings.newEventModal.singleDayLinkText"
+              i18n-default-message="Single day"
+            ></a>
+          </li>
+          <li ng-class="{ active: ui.rangeType === '1' }">
+            <a
+              href="#"
+              ng-click="ui.setRangeType('1', $event)"
+              i18n-id="xpack.ml.settings.newEventModal.dayRangeLinkText"
+              i18n-default-message="Day range"
+            ></a>
+          </li>
+          <li ng-class="{ active: ui.rangeType === '2' }">
+            <a
+              href="#"
+              ng-click="ui.setRangeType('2', $event)"
+              i18n-id="xpack.ml.settings.newEventModal.timeRangeLinkText"
+              i18n-default-message="Time range"
+            ></a>
+          </li>
         </ul>
       </div>
       <div
@@ -45,9 +73,11 @@
         <div ng-show="ui.rangeType === RANGE_TYPE.DAY_RANGE">
           <div class="row">
             <div class="col-md-6 calendar">
-              <label class="kuiFormLabel">
-                From:
-              </label>
+              <label
+                i18n-id="xpack.ml.settings.newEventModal.dayFromLabel"
+                i18n-default-message="From:"
+                class="kuiFormLabel"
+              ></label>
               <datepicker
                 offset-timezone
                 ng-model="ui.timepicker.start"
@@ -57,9 +87,11 @@
               <div class="partition"></div>
             </div>
             <div class="col-md-6 calendar">
-              <label class="kuiFormLabel">
-                To:
-              </label>
+              <label
+                i18n-id="xpack.ml.settings.newEventModal.dayToLabel"
+                i18n-default-message="To:"
+                class="kuiFormLabel"
+              ></label>
               <datepicker
                 offset-timezone
                 ng-model="ui.timepicker.end"
@@ -74,9 +106,11 @@
           <div class="row">
             <div class="col-md-6 calendar">
               <div class="calendar-input-container">
-                <label class="kuiFormLabel">
-                  From:
-                </label>
+                <label
+                  i18n-id="xpack.ml.settings.newEventModal.timeFromLabel"
+                  i18n-default-message="From:"
+                  class="kuiFormLabel"
+                ></label>
                 <input type="text" class="form-control" input-datetime="YYYY-MM-DD HH:mm:ss" ng-model="ui.timepicker.start">
               </div>
               <datepicker
@@ -88,9 +122,11 @@
               <div class="partition partition-large"></div>
             </div>
             <div class="col-md-6 calendar">
-              <label class="kuiFormLabel">
-                From:
-              </label>
+              <label
+                i18n-id="xpack.ml.settings.newEventModal.timeToLabel"
+                i18n-default-message="To:"
+                class="kuiFormLabel"
+              ></label>
               <div class="calendar-input-container">
                 <input type="text" class="form-control" input-datetime="YYYY-MM-DD HH:mm:ss" ng-model="ui.timepicker.end">
               </div>
@@ -115,15 +151,17 @@
   <button
     ng-click="save()"
     ng-disabled="ui.saveEnabled() === false"
-    class="kuiButton kuiButton--primary" >
-    Add
-  </button>
+    class="kuiButton kuiButton--primary"
+    i18n-id="xpack.ml.settings.newEventModal.addButtonLabel"
+    i18n-default-message="Add"
+  ></button>
   <button
     ng-click="cancel()"
     ng-disabled="(saveLock === true)"
     class="kuiButton kuiButton--primary"
-    aria-label="Cancel">
-    Cancel
-  </button>
+    aria-label="{{ ::'xpack.ml.settings.newEventModal.cancelButtonAriaLabel' | i18n: {defaultMessage: 'Cancel'} }}"
+    i18n-id="xpack.ml.settings.newEventModal.cancelButtonLabel"
+    i18n-default-message="Cancel"
+  ></button>
 
 </div>

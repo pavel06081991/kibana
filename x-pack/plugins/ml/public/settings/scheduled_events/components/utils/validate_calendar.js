@@ -8,6 +8,7 @@
 
 //  Calendar ID requires the same format as a Job ID, therefore isJobIdValid can be used
 
+import { i18n } from '@kbn/i18n';
 import { isJobIdValid } from 'plugins/ml/../common/util/job_utils';
 import _ from 'lodash';
 
@@ -20,9 +21,10 @@ export function validateCalendarId(calendarId, checks) {
     checks.calendarId.valid = false;
   } else if (isJobIdValid(calendarId) === false) {
     checks.calendarId.valid = false;
-    let msg = 'Calendar ID can contain lowercase alphanumeric (a-z and 0-9), hyphens or underscores; ';
-    msg += 'must start and end with an alphanumeric character';
-    checks.calendarId.message = msg;
+    checks.calendarId.message = i18n.translate('xpack.ml.settings.calendarIdAllowedCharactersDescription', {
+      defaultMessage: 'Calendar ID can contain lowercase alphanumeric (a-z and 0-9), hyphens or underscores; ' +
+      'must start and end with an alphanumeric character',
+    });
   }
 
   _.each(checks, (item) => {
